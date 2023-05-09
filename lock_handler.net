@@ -1,0 +1,53 @@
+unnamed_net26	U203-12 U201-4 
+unnamed_net25	U203-11 U203-1 
+B_hard	U203-3 
+B_soft	U201-3 
+unnamed_net24	U203-9 U201-2 
+unnamed_net23	U203-8 U203-4 
+N_in_locked	U203-2 U201-10 U203-5 
+A_hard	U203-6 
+A_soft	U201-1 
+unnamed_net22	U200-13 U205-2 U205-3 
+N_B_not_ready	U205-4 R211-1 
+unnamed_net21	U205-1 U202-10 
+N_local_B_ready	U203-13 U202-8 U204-1 
+unnamed_net20	U204-12 U205-5 
+N_B_ready	U205-6 R212-1 
+unnamed_net19	R212-2 LED3-1 
+unnamed_net18	R211-2 LED2-1 
+unnamed_net17	U200-12 U205-12 U205-11 
+N_A_not_ready	U205-10 R213-1 
+unnamed_net16	U205-13 U202-13 
+N_local_A_ready	U203-10 U202-11 U204-3 
+unnamed_net15	U204-6 U205-9 
+N_A_ready	U205-8 R214-1 
+unnamed_net14	R214-2 LED5-1 
+unnamed_net13	U204-8 U201-5 
+N_in_ready	U204-9 U201-12 
+N_in_not_disabled	U204-13 U204-5 U204-11 U201-8 U202-5 U202-6 
+N_disabled	U202-4 R217-1 
+unnamed_net12	R218-2 Q201-B 
+N_locked	R218-1 R216-1 U202-1 
+N_all_ready	U201-6 R215-1 
+LP_out_pulldown_not_ready	U200-11 R210-2 
+unnamed_net11	R203-2 Q200-C 
+unnamed_net10	R210-1 Q200-B 
+N_in_disabled	U202-9 U202-12 U201-9 U202-2 U200-8 
+LP_in_disabled	U200-9 R209-2 
+unnamed_net9	CONN_disable-1 R209-1 C202-2 R206-2 
+unnamed_net8	R206-1 R202-2 
+unnamed_net7	R217-2 LED1-1 
+unnamed_net6	R213-2 LED4-1 
+unnamed_net5	LED8-1 LED7-2 
+unnamed_net4	R216-2 LED7-1 
+unnamed_net3	R215-2 LED6-1 
+N_in_not_locked	U201-11 U204-10 U202-3 U200-6 
+N_in_not_ready	U204-2 U204-4 U201-13 U200-3 
+LP_in_locked	U200-4 R208-2 
+unnamed_net2	R208-1 C201-2 R205-2 
+Vcc	U203-14 U205-14 U204-14 U201-14 U202-14 U200-10 U200-5 U200-14 U200-2 R202-1 R200-1 
+LP_in_ready	U200-1 R207-2 
+unnamed_net1	C200-2 R207-1 R204-2 
+GND	CONN_disable-2 U203-7 LED3-2 LED2-2 U205-7 LED5-2 U204-7 U201-7 Q201-E U202-7 Q200-E C202-1 LED1-2 LED4-2 LED8-2 LED6-2 U200-7 C201-1 C200-1 R201-1 CONN_chain-4 CONN_chain-2 
+lock_chain	R205-1 R201-2 CONN_chain-3 
+ready_chain	R203-1 R200-2 R204-1 CONN_chain-1 

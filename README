@@ -1,0 +1,29 @@
+This module handles a collective bondage and/or multiple points self bondage.
+It checks all the locks are closed and locks.
+
+It has many LED to see where is the problem, if so.
+For each channel, a green and an amber LED tells if it is detected or not.
+If all the detections of all the modules are on, the LED switched off and an amber LED per module illuminates.
+When it is locked the amber switches off and a set of 2 red LED illuminates.
+If the lock is lost for one, all the locks unlock.
+If a module is unused a switch turns everything off, tells to the daisy-chain it is OK, discards the lock command and illuminates a blue LED.
+
+It is designed as small modules of 2 detection inputs. There is a daisy-chain in between.
+* The mode 1 uses a 3 wires cable (prefer a 2 pairs). The system can wait when everybody is ready to lock. By connecting the two active wires, it locks. By opening or shorting to the ground, it unlocks.
+* The mode 2 uses a one pair. They are always together. The system lock as soon as everybody is OK. By shorting the active wire to the ground wire, it unlocks.
+
+Each input channel has a soft and a hard input. There is a dilemma between:
+* a too strong detection that can detect the bondage is open, and unlock everybody.
+* a too soft detection that can make a lock opening later.
+To fix that, the hard and the soft are needed to lock. Only the soft is needed to maintain.
+If a switch style detection is used, that can be done with 2 switches. If a metal detector style detection is used, it is two thresholds.
+If this feature is not used, the two can be connected together.
+
+It is a component.
+* The output is a transistor. The user can add the power circuits needed against the lock chosen (electro magnet, pneumatic output etc...).
+* Detection inputs of integrated circuits are exposed. The user can add switch style (mostly passive) components.  The user can add a metal detector style circuit.
+
+Some VHDL files are provided to describe the behaviour in a more human-readable way.
+A test is provided to check the truth table is the same for both the behaviour file and the file exported from the schematic.
+A PCB has been partially drawn. The most tricky part is routed. A schematic diagram should be added for the decouplings, for the IC power and, if so, for voltage regulator. It is a good demonstrator of the size of the PCB. It uses through hole components, not SMD.
+
