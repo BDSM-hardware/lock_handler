@@ -1,3 +1,4 @@
+ring_chain	CONN_chain-1 
 unnamed_net26	U203-12 U201-4 
 unnamed_net25	U203-11 U203-1 
 B_hard	U203-3 
@@ -34,8 +35,8 @@ unnamed_net11	R203-2 Q200-C
 unnamed_net10	R210-1 Q200-B 
 N_in_disabled	U202-9 U202-12 U201-9 U202-2 U200-8 
 LP_in_disabled	U200-9 R209-2 
-unnamed_net9	CONN_disable-1 R209-1 C202-2 R206-2 
-unnamed_net8	R206-1 R202-2 
+unnamed_net9	CONN_disable-1 R206-1 
+unnamed_net8	R209-1 C202-2 R206-2 R202-2 
 unnamed_net7	R217-2 LED1-1 
 unnamed_net6	R213-2 LED4-1 
 unnamed_net5	LED8-1 LED7-2 
@@ -48,6 +49,6 @@ unnamed_net2	R208-1 C201-2 R205-2
 Vcc	U203-14 U205-14 U204-14 U201-14 U202-14 U200-10 U200-5 U200-14 U200-2 R202-1 R200-1 
 LP_in_ready	U200-1 R207-2 
 unnamed_net1	C200-2 R207-1 R204-2 
-GND	CONN_disable-2 U203-7 LED3-2 LED2-2 U205-7 LED5-2 U204-7 U201-7 Q201-E U202-7 Q200-E C202-1 LED1-2 LED4-2 LED8-2 LED6-2 U200-7 C201-1 C200-1 R201-1 CONN_chain-4 CONN_chain-2 
-lock_chain	R205-1 R201-2 CONN_chain-3 
-ready_chain	R203-1 R200-2 R204-1 CONN_chain-1 
+GND	CONN_disable-2 U203-7 LED3-2 LED2-2 U205-7 LED5-2 U204-7 U201-7 Q201-E U202-7 Q200-E C202-1 LED1-2 LED4-2 LED8-2 LED6-2 U200-7 C201-1 C200-1 R201-1 CONN_chain-6 CONN_chain-4 CONN_chain-2 
+lock_chain	CONN_chain-5 R205-1 R201-2 
+ready_chain	CONN_chain-3 R203-1 R200-2 R204-1 
