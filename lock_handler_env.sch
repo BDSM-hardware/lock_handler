@@ -89,7 +89,13 @@ refdes=C204
 T 46500 41700 5 10 0 0 270 0 1
 symversion=0.1
 T 45600 41900 5 10 0 1 0 0 1
-precision=20%
+tolerance=20%
+T 45600 41900 5 10 0 1 0 0 1
+footprint=2.54
+T 45600 41900 5 10 1 1 0 0 1
+value=1uF
+T 45600 41900 5 10 1 1 0 0 1
+comment=MLCC
 }
 C 46200 41900 1 270 0 capacitor-1.sym
 {
@@ -100,7 +106,13 @@ refdes=C205
 T 47100 41700 5 10 0 0 270 0 1
 symversion=0.1
 T 46200 41900 5 10 0 1 0 0 1
-precision=20%
+tolerance=20%
+T 46200 41900 5 10 0 1 0 0 1
+footprint=2.54
+T 46200 41900 5 10 1 1 0 0 1
+value=1uF
+T 46200 41900 5 10 1 1 0 0 1
+comment=MLCC
 }
 C 46800 41900 1 270 0 capacitor-1.sym
 {
@@ -111,7 +123,13 @@ refdes=C206
 T 47700 41700 5 10 0 0 270 0 1
 symversion=0.1
 T 46800 41900 5 10 0 1 0 0 1
-precision=20%
+tolerance=20%
+T 46800 41900 5 10 0 1 0 0 1
+footprint=2.54
+T 46800 41900 5 10 1 1 0 0 1
+value=1uF
+T 46800 41900 5 10 1 1 0 0 1
+comment=MLCC
 }
 C 45100 40700 1 0 0 gnd-1.sym
 C 45700 40700 1 0 0 gnd-1.sym
@@ -130,7 +148,13 @@ refdes=C203
 T 45900 41700 5 10 0 0 270 0 1
 symversion=0.1
 T 45000 41900 5 10 0 1 0 0 1
-precision=20%
+tolerance=20%
+T 45000 41900 5 10 0 1 0 0 1
+footprint=2.54
+T 45000 41900 5 10 1 1 0 0 1
+value=1uF
+T 45000 41900 5 10 1 1 0 0 1
+comment=MLCC
 }
 C 45600 45800 1 180 0 resistorpack5-1.sym
 {
@@ -139,11 +163,11 @@ device=RESISTORPACK_5
 T 44400 45300 5 10 1 1 180 0 1
 refdes=R228
 T 44100 44900 5 10 1 1 0 0 1
-value=10K
+value=4.7K
 T 44600 44500 5 10 1 1 0 0 1
 comment=Elec detec. only
 T 45600 45800 5 10 0 1 0 0 1
-precision=10%, diff. 10%
+tolerance=10%, diff. 10%
 }
 C 45700 50700 1 0 0 resistor-2.sym
 {
@@ -151,14 +175,14 @@ T 46100 51050 5 10 0 0 0 0 1
 device=RESISTOR
 T 45600 51000 5 10 1 1 0 0 1
 refdes=R220
-T 45600 50500 5 10 1 1 0 0 1
+T 45100 50500 5 10 1 1 0 0 1
 comment=Switch detec. only
 T 46300 51000 5 10 1 1 0 0 1
 value=22.1
 T 45700 50700 5 10 0 1 0 0 1
 footprint=500mil
 T 45700 50700 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
 }
 C 45700 49300 1 0 0 resistor-2.sym
 {
@@ -170,10 +194,10 @@ T 45700 49300 5 10 0 1 0 0 1
 footprint=500mil
 T 46300 49600 5 10 1 1 0 0 1
 value=22.1
-T 45600 49100 5 10 1 1 0 0 1
+T 45100 49100 5 10 1 1 0 0 1
 comment=Switch detec. only
 T 45700 49300 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
 }
 C 45700 46500 1 0 0 resistor-2.sym
 {
@@ -185,10 +209,10 @@ T 45700 46500 5 10 0 1 0 0 1
 footprint=500mil
 T 46300 46800 5 10 1 1 0 0 1
 value=22.1
-T 45600 46300 5 10 1 1 0 0 1
+T 45100 46300 5 10 1 1 0 0 1
 comment=Switch detec. only
 T 45700 46500 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
 }
 C 45700 47900 1 0 0 resistor-2.sym
 {
@@ -200,10 +224,10 @@ T 45700 47900 5 10 0 1 0 0 1
 footprint=500mil
 T 46300 48200 5 10 1 1 0 0 1
 value=22.1
-T 45600 47700 5 10 1 1 0 0 1
+T 45100 47700 5 10 1 1 0 0 1
 comment=Switch detec. only
 T 45700 47900 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
 }
 C 49900 46800 1 0 0 connector5-2.sym
 {
@@ -227,7 +251,7 @@ value=22.1
 T 47500 50500 5 10 1 1 0 0 1
 comment=Switch detec. only
 T 47400 50700 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
 }
 C 47400 49300 1 0 0 resistor-2.sym
 {
@@ -242,7 +266,7 @@ value=22.1
 T 47500 49100 5 10 1 1 0 0 1
 comment=Switch detec. only
 T 47400 49300 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
 }
 C 47400 47900 1 0 0 resistor-2.sym
 {
@@ -257,7 +281,7 @@ value=22.1
 T 47400 47700 5 10 1 1 0 0 1
 comment=Switch detec. only
 T 47400 47900 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
 }
 C 47400 46500 1 0 0 resistor-2.sym
 {
@@ -272,53 +296,69 @@ value=22.1
 T 47400 46300 5 10 1 1 0 0 1
 comment=Switch detec. only
 T 47400 46500 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
 }
 C 47000 50800 1 270 0 capacitor-1.sym
 {
 T 47700 50600 5 10 0 0 270 0 1
 device=CAPACITOR
-T 47000 49800 5 10 1 1 90 0 1
+T 47100 49800 5 10 1 1 90 0 1
 refdes=C209
 T 47900 50600 5 10 0 0 270 0 1
 symversion=0.1
 T 47000 50800 5 10 0 1 0 0 1
 footprint=2.54
 T 47000 50800 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
+T 46900 49700 5 10 1 1 90 0 1
+value=2.2uF or 1nF
+T 47000 50800 5 10 1 1 0 0 1
+comment=/
 }
 C 47000 49400 1 270 0 capacitor-1.sym
 {
 T 47700 49200 5 10 0 0 270 0 1
 device=CAPACITOR
-T 47000 48400 5 10 1 1 90 0 1
+T 47100 48400 5 10 1 1 90 0 1
 refdes=C210
 T 47900 49200 5 10 0 0 270 0 1
 symversion=0.1
 T 47000 49400 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
+T 46900 48300 5 10 1 1 90 0 1
+value=2.2uF or 1nF
+T 47000 49400 5 10 1 1 0 0 1
+comment=/
 }
 C 47000 48000 1 270 0 capacitor-1.sym
 {
 T 47700 47800 5 10 0 0 270 0 1
 device=CAPACITOR
-T 47000 46900 5 10 1 1 90 0 1
+T 47100 47000 5 10 1 1 90 0 1
 refdes=C211
 T 47900 47800 5 10 0 0 270 0 1
 symversion=0.1
 T 47000 48000 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
+T 46900 46900 5 10 1 1 90 0 1
+value=2.2uF or 1nF
+T 47000 48000 5 10 1 1 0 0 1
+comment=/
 }
 C 47000 46600 1 270 0 capacitor-1.sym
 {
 T 47700 46400 5 10 0 0 270 0 1
 device=CAPACITOR
-T 47000 45500 5 10 1 1 90 0 1
+T 47100 45500 5 10 1 1 90 0 1
 refdes=C212
 T 47900 46400 5 10 0 0 270 0 1
 symversion=0.1
 T 47000 46600 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
+T 46900 45500 5 10 1 1 90 0 1
+value=2.2uF or 1nF
+T 47000 46600 5 10 1 1 0 0 1
+comment=/
 }
 C 42600 43300 1 0 0 resistor-2.sym
 {
@@ -331,19 +371,19 @@ value=10K
 T 42600 43300 5 10 0 1 0 0 1
 footprint=500mil
 T 42600 43300 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
 }
 C 43600 43400 1 0 0 vcc-1.sym
 N 44200 43100 41400 43100 4
 N 42600 43400 42600 43100 4
 N 43500 43400 43800 43400 4
-C 51600 49400 1 0 0 input-2.sym
+C 51600 49300 1 0 0 input-2.sym
 {
-T 51600 49600 5 10 1 1 0 0 1
+T 51600 49500 5 10 1 1 0 0 1
 net=lock_cmd:1
-T 52200 50100 5 10 0 0 0 0 1
+T 52200 50000 5 10 0 0 0 0 1
 device=none
-T 52100 49500 5 10 0 1 0 7 1
+T 52100 49400 5 10 0 1 0 7 1
 value=IO
 }
 C 53000 49300 1 0 0 resistor-2.sym
@@ -357,7 +397,7 @@ value=1.15K
 T 53000 49300 5 10 0 0 0 0 1
 footprint=500mil
 T 53000 49300 5 10 0 1 0 0 1
-precision=10%
+tolerance=10%
 }
 C 53900 48500 1 0 0 darlington_NPN-1.sym
 {
@@ -370,7 +410,9 @@ refdes=Q201
 T 53900 48500 5 10 1 1 0 0 1
 value=TIP120
 T 53900 48500 5 10 0 1 0 0 1
-comment=Or equiv. BCE darlington
+comment=Or equiv. BCE darlington Vce twice the lock voltage
+T 53900 48500 5 10 0 1 0 0 1
+tolerance=/
 }
 C 54800 48200 1 0 0 gnd-1.sym
 N 44400 50800 45700 50800 4
@@ -389,75 +431,79 @@ device=RESISTORPACK_5
 T 48300 45900 5 10 1 1 180 0 1
 refdes=R229
 T 48000 45500 5 10 1 1 0 0 1
-value=10K
+value=4.7K
 T 48600 44900 5 10 1 1 0 0 1
 comment=Switch detec. only
 T 49500 46200 5 10 0 1 0 0 1
-precision=10%, diff. 10%
+tolerance=10%, diff. 10%
 }
-C 43500 50000 1 0 0 diode-1.sym
+C 46700 50400 1 180 0 diode-1.sym
 {
-T 43900 50600 5 10 0 0 0 0 1
+T 46300 49800 5 10 0 0 180 0 1
 device=DIODE
-T 43300 50400 5 10 1 1 0 0 1
+T 45300 50400 5 10 1 1 180 0 1
 refdes=D201
-T 43400 49800 5 10 1 1 0 0 1
+T 46700 50000 5 10 1 1 180 0 1
 comment=Elec detec. only
-T 43500 50000 5 10 0 1 0 0 1
+T 46700 50400 5 10 0 1 180 0 1
 footprint=300mil
-T 44200 50400 5 10 1 1 0 0 1
+T 46000 50400 5 10 1 1 180 0 1
 value=1N4148
+T 46700 50400 5 10 0 1 0 0 1
+tolerance=/
 }
-C 43500 48500 1 0 0 diode-1.sym
+C 46700 49000 1 180 0 diode-1.sym
 {
-T 43900 49100 5 10 0 0 0 0 1
+T 46300 48400 5 10 0 0 180 0 1
 device=DIODE
-T 43300 48900 5 10 1 1 0 0 1
+T 45300 49000 5 10 1 1 180 0 1
 refdes=D202
-T 44200 48900 5 10 1 1 0 0 1
+T 46000 49000 5 10 1 1 180 0 1
 value=1N4148
-T 43500 48500 5 10 0 1 0 0 1
+T 46700 49000 5 10 0 1 180 0 1
 footprint=300mil
-T 43400 48300 5 10 1 1 0 0 1
+T 46700 48600 5 10 1 1 180 0 1
 comment=Elec detec. only
+T 46700 49000 5 10 0 1 0 0 1
+tolerance=/
 }
-C 43600 47100 1 0 0 diode-1.sym
+C 46700 47600 1 180 0 diode-1.sym
 {
-T 44000 47700 5 10 0 0 0 0 1
+T 46300 47000 5 10 0 0 180 0 1
 device=DIODE
-T 43400 47600 5 10 1 1 0 0 1
+T 45300 47600 5 10 1 1 180 0 1
 refdes=D203
-T 43600 47100 5 10 0 1 0 0 1
+T 46700 47600 5 10 0 1 180 0 1
 footprint=300mil
-T 44200 47600 5 10 1 1 0 0 1
+T 46000 47600 5 10 1 1 180 0 1
 value=1N4148
-T 43500 46900 5 10 1 1 0 0 1
+T 46700 47200 5 10 1 1 180 0 1
 comment=Elec detec. only
+T 46700 47600 5 10 0 1 0 0 1
+tolerance=/
 }
-C 43500 45800 1 0 0 diode-1.sym
+C 46700 46200 1 180 0 diode-1.sym
 {
-T 43900 46400 5 10 0 0 0 0 1
+T 46300 45600 5 10 0 0 180 0 1
 device=DIODE
-T 43300 46300 5 10 1 1 0 0 1
+T 45300 46200 5 10 1 1 180 0 1
 refdes=D204
-T 43500 45800 5 10 0 1 0 0 1
+T 46700 46200 5 10 0 1 180 0 1
 footprint=300mil
-T 44000 46300 5 10 1 1 0 0 1
+T 46000 46200 5 10 1 1 180 0 1
 value=1N4148
-T 43200 45600 5 10 1 1 0 0 1
+T 46900 45800 5 10 1 1 180 0 1
 comment=Elec detec. only
+T 46700 46200 5 10 0 1 0 0 1
+tolerance=/
 }
 N 44600 45800 44600 46600 4
 N 44400 46600 45700 46600 4
-N 44400 46000 44600 46000 4
 N 44400 48000 45700 48000 4
 N 44900 45800 44900 48000 4
 N 45200 45800 45200 49400 4
 N 44400 49400 45700 49400 4
 N 45500 45800 45500 50800 4
-N 44400 50200 45500 50200 4
-N 44400 48700 45200 48700 4
-N 44500 47300 44900 47300 4
 N 49400 46200 49400 47600 4
 N 49400 47600 49900 47600 4
 N 49100 46200 49100 48000 4
@@ -485,5 +531,92 @@ T 53500 50450 5 10 0 0 0 0 1
 device=RESISTOR
 T 53300 50400 5 10 1 1 0 0 1
 refdes=R219
+T 51400 49900 5 10 1 1 0 0 1
+comment=value half the lock device resistance
+T 53100 50100 5 10 1 1 0 0 1
+value=1K
+T 53100 50100 5 10 0 1 0 0 1
+footprint=500mil
+T 53100 50100 5 10 0 1 0 0 1
+tolerance=10%
 }
-N 53000 49500 53000 49400 4
+N 45800 50200 45500 50200 4
+N 46700 50200 46700 50800 4
+N 45800 48800 45200 48800 4
+N 46700 48800 46700 49400 4
+N 45800 47400 44900 47400 4
+N 46700 47400 46700 48000 4
+N 46700 46000 46700 46600 4
+N 45800 46000 44600 46000 4
+C 53400 45900 1 0 0 lm7806-1.sym
+{
+T 55000 47200 5 10 0 0 0 0 1
+device=7806
+T 54800 46900 5 10 1 1 0 6 1
+refdes=Q202
+T 53400 45900 5 10 0 1 0 0 1
+footprint=TO220
+T 52900 46000 5 10 1 1 0 0 1
+comment=7805 or 7806
+T 53400 45900 5 10 1 1 0 0 1
+value=7806
+T 53400 45900 5 10 0 1 0 0 1
+tolerance=/
+}
+C 54800 47500 1 0 0 vcc-1.sym
+C 54700 47500 1 180 0 diode-1.sym
+{
+T 54300 46900 5 10 0 0 180 0 1
+device=DIODE
+T 54000 47500 5 10 1 1 180 0 1
+refdes=D205
+T 54500 47400 5 10 1 1 0 0 1
+value=BA158
+T 54700 47500 5 10 0 1 0 0 1
+footprint=300mil
+T 54700 47500 5 10 0 1 0 0 1
+tolerance=/
+}
+N 55000 47500 55000 46500 4
+N 54700 47300 55000 47300 4
+N 53800 47300 53400 47300 4
+N 53400 47300 53400 46500 4
+C 54100 45600 1 0 0 gnd-1.sym
+C 47400 41900 1 270 0 capacitor-1.sym
+{
+T 48100 41700 5 10 0 0 270 0 1
+device=CAPACITOR
+T 48300 41700 5 10 0 0 270 0 1
+symversion=0.1
+T 47400 41900 5 10 0 1 0 0 1
+tolerance=20%
+T 47500 40900 5 10 1 1 90 0 1
+refdes=C207
+T 47400 41900 5 10 0 1 0 0 1
+footprint=2.54
+T 47400 41900 5 10 1 1 0 0 1
+value=1uF
+T 47400 41900 5 10 1 1 0 0 1
+comment=MLCC
+}
+C 48000 41900 1 270 0 capacitor-1.sym
+{
+T 48700 41700 5 10 0 0 270 0 1
+device=CAPACITOR
+T 48900 41700 5 10 0 0 270 0 1
+symversion=0.1
+T 48000 41900 5 10 0 1 0 0 1
+tolerance=20%
+T 48100 40900 5 10 1 1 90 0 1
+refdes=C208
+T 48000 41900 5 10 0 1 0 0 1
+footprint=2.54
+T 48000 41900 5 10 1 1 0 0 1
+value=1uF
+T 48000 41900 5 10 1 1 0 0 1
+comment=MLCC
+}
+C 47500 40700 1 0 0 gnd-1.sym
+C 48100 40700 1 0 0 gnd-1.sym
+C 47400 41900 1 0 0 vcc-1.sym
+C 48000 41900 1 0 0 vcc-1.sym
