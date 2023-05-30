@@ -1,15 +1,17 @@
 This module handles a collective bondage and/or multiple points self bondage.
 It checks all the locks are closed and locks. If the lock is lost for one, all the locks unlock.
 
-It has many LED to see where is the problem, if so.
+For the details, see the INSTALL file.
+
+It has many LED to follow the procedure and see where is the problem, if so.
 For each channel, a green and an amber LED tells if it is detected or not.
 If all the detections of all the modules are on, the LEDs switch off and an amber LED per module illuminates.
 When it is locked the amber switches off and a set of 2 red LED illuminates.
 If a module is unused a switch turns everything off, tells to the daisy-chain it is OK, discards the lock command and illuminates a blue LED.
 
 It is designed as small modules of 2 detection inputs. There is a daisy-chain in between.
-* The mode 1 uses a 3 wires cable (prefer a 2 pairs). The system can wait when everybody is ready to lock. By connecting the two active wiresto each other, it locks. By opening or shorting to the ground, it unlocks.
-* The mode 2 uses a one pair. They are always together. The system lock as soon as everybody is OK. By shorting the active wire to the ground wire, it unlocks.
+* Mode 1: The system waits everybody is ready to lock, and illuminate an all ready LED. By connecting two wires to each other, it locks. By opening or shorting to the ground, it unlocks.
+* Mode 2: It is similar to mode 1 but it locks as soon as everybody is ready without external action (remote control, timer etc...). This spares some wires.
 
 Each input channel has a soft and a hard input. There is a dilemma between:
 * a too strong detection that can detect the bondage is open, and unlock everybody.
@@ -20,11 +22,12 @@ If this feature is not used, the two can be connected together.
 
 It is a component.
 * The output is a transistor. The user can add the power circuits needed against the lock chosen (electro magnet, pneumatic output etc...).
-* Detection inputs of integrated circuits are exposed. The user can add switch style (mostly passive) components.  The user can add a metal detector style circuit.
+* The board is designed to run in stand alone mode with switches directly cconnected or with an additional board. It is mostly a metal detector style circuit. However, some components differs.
 
 There is no circuit to program, no PIC, noFPGA, noCPLD etc... It works as soon as the 74HCxx and other components are soldered.
 
 Some VHDL files are provided to describe the behaviour in a more human-readable way.
 A test is provided to check the truth table is the same for both the behaviour file and the file exported from the schematic.
-A PCB has been partially drawn. The most tricky part is routed. A schematic diagram should be added for the decouplings, for the IC power and, if so, for voltage regulator. It is a good demonstrator of the size of the PCB. It uses through hole components, not SMD.
+
+A PCB has been partially drawn. The most tricky part is routed. A schematic diagram has been added for the decouplings, for the IC power and for voltage regulator. The size of the PCB is, today, mostly known. It uses through hole components, not SMD.
 

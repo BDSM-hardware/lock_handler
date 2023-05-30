@@ -1,0 +1,106 @@
+For the general description, see the README file
+
+Please note, it is an early version, it may refer to outdated or not yet updated design files.
+
+1) Board
+
+1-1) PCB
+The PCB is standard for all the configurations or modes. However, some assembly or components differs, see 3.
+The plated drills should be used.
+
+1-2) Heat-Sinks
+The board is designed for basic "U" TO-220 heat-sinks.
+For the output transistor, it should be always OK as it is ON or OFF.
+For the voltage regulator, The supply voltage and the consumption should be considered.
+The board itself consumes more or less the current for the LED. No more than 2 LED can be ON at a time. A third can be on in the case of special mounting, see 7.
+* If standalone switches are used, the heat-sink can be omitted. Even for a 24V supply voltage, the board plus the pull-up resistors (4 time) make a maximum of 400mW.
+* If a low power external electronic detection board or a low power supply are used, a basic "U" is enough.
+* Otherwise, an external heat-sink and extension wires have to be used.
+
+1-3) Voltage regulator
+The voltage is not that critics. It relies on 3 rules.
+* Due to the daisy chains, all the modules should use the same voltage. If not, due to some resistors, the circuits may not burn, but they do not work properly. For this reason, it should NOT be omitted, even with a 5 or 6 volts regulated power supply voltage, ... or 10mm2 (AWG7) wire should be used!!!
+* The maximum is 6V for the 74HC HC-mos circuits. The minimum is 5V for the LEDs driven directly by the circuits.
+* If an external electronic detection board is used, it involves the board as well.
+If the power supply voltage is low (e.g. 6V with a 5V regulator), a low drop out should be used. The 7805 and 7806 are not that high drop out, and can be used on a power supply voltage down to 9V.
+
+1-4) LEDs
+The LED are drawn on the component side silk. Since through hole components are used, the copper side silk may be omitted for cost reasons. Due to the size of the TO200 heat-sinks, the LED with stoppers may be used, the LED may be mounted on the copper side and/or some 3D printed separators may be designed.
+The square pad is the anode (the long pin) of the LED.
+The red colour should NOT be exchanged with another colour and vice versa.
+
+1-5) Output module
+A Darlington transistor has been included in the design. For very low currents, another transistor can be used as long as its pin out is BCE.
+The resistor R219 is intended to decrease the current faster, to avoid a weak release. It is a good idea, especially if a relay is used. A good choice is a value between the half of its resistance and its resistance.
+The Vce max of the transistor should consider the supply voltage plus the R219 voltage on opening. Then the supply voltage should be multiplied by (Rcoil + R219)/Rcoil and a security margin should be added.
+
+1-6) Decoupling
+For the small decoupling, Multi Layer Capacitors are nice. Tantal capacitors might be used but not more than 50%.
+The square pad is the plus vcc.
+
+1-7) Precisions and values
+The precision of most of the components is about 10% or 20%.
+Round values in the E6, or even E3, series could have been used. I prefer to take values in the E96 series to avoid some resistors differ only by one colour (e.g. 1K 10K). I understand some shops apply the rule they are all 1% metallic film but the outside E12 are more expensive. Is it still the case? Does the price of the resistors a large ratio of the entire configuration and the mechanical parts?
+Without any letter, the resistors values are Ohms
+With a post-fix letter, the decade follows the Spice simulation software rules (K=kilo, m=mili, meg=mega, u=micro, p=pico). 
+
+
+2) Inter modules connections
+
+2-1) Connection topography
+Inter modules connections can use chain, star style or mixed. For the chain, all the connections, on the board are doubled to make things easy. The second one is named with a _NEXT post-fix.
+
+2-2) Lock modes
+
+2-3) Wires
+It is recommended to use paired cables.
+All the connections on the board use single line pins.
+Odd pins are the active pins, Even pins are the corresponding wire in the pair.
+Some space between the CONN_CHAIN and the CONN_PWR prevent some accidental contact between the unregulated power supply and the signal wires.
+
+2-4) Modes
+The pin 3 (and its pair pin 4) is the ready line. The pin 5 (and its pair pin 6) is the lock line. They can be connected to each other by an operator action, remote control or other. In such case, all the all ready LED illuminate and people wait for the lock. After the opening or tied to ground (connect the 2 wires of the pair(s)), all unlocks.
+If they are connected to each other by construction, this intermediary state is skept. In such case the unlock is done only by tying to ground (connect the 2 wires of the pair(s).
+
+2-5) Ring button
+For some configurations, a ring button can be used. If it is not used or wired without the module, the pin 1 (CONN_CHAIN) and its pair pin 2 can be omitted. There is no facility provided other than a pull-up resistor. One additional board, with a partial wiring, (see 7) can be built to use the filtering and the Schmidt trigger.
+
+3) Input connections, PCB assembly
+
+3-1) switch modes
+The resistors R220 to R227 should remain to their original values.
+The capacitors C209 to C212 are large values such as 2.2uF.
+The network resistors R228 should be omitted.
+3-1-1) NO switches
+
+
+3-1-2) NC switches
+
+
+3-2) External electronic board detection  
+Some RC with short time constant prevents overshoot and EMC problems.
+The resistors R224 to R227 should be increase to 90.9 Ohms
+The capacitors C209 to C212 are small values such as 1nF.
+
+3-2-1) Single supply board
+In such case, the input receives levels between 0 and Vcc.
+The diodes D201 to D204 are replaced by straps or, for practical reasons, a < 25 ohms resistor.
+The network resistors R228 should be omitted.
+
+3-2-2) Vcc and Vdd supply board
+The board may generate a negative supply for analogue circuits.
+In such case, the input receives levels between Vdd and Vcc.
+The diodes D201 to D204 have to be installed.
+The network resistors should be 4x 4.7K.
+
+5) Input connections
+
+
+
+6) Output connections
+The relay, electromagnet, pneumatic solenoid valve is powered directly on the supply.
+Then the voltage is the coil one.
+For practical reasons, the coil is connected to the CONN_COIL connector.
+If it is polarized, the square is the plus.
+
+7) Special mounting
