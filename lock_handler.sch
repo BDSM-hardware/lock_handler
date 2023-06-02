@@ -50,7 +50,7 @@ value=22.1
 T 44200 44300 5 10 0 1 0 0 1
 footprint=500mil
 T 44200 44300 5 10 1 1 0 0 1
-tolerance=20%
+tolerance=10%
 T 44200 44300 5 10 1 1 0 0 1
 comment=/
 }
@@ -152,7 +152,7 @@ value=22.1
 T 44100 43300 5 10 0 1 0 0 1
 footprint=500mil
 T 44100 43300 5 10 1 1 0 0 1
-tolerance=20%
+tolerance=10%
 T 44100 43300 5 10 1 1 0 0 1
 comment=/
 }
@@ -310,7 +310,7 @@ value=22.1
 T 41700 41600 5 10 0 1 0 0 1
 footprint=500mil
 T 41700 41600 5 10 1 1 0 0 1
-tolerance=20%
+tolerance=10%
 T 41700 41600 5 10 1 1 0 0 1
 comment=/
 }
@@ -393,7 +393,7 @@ value=47.5
 T 42300 44800 5 10 0 1 0 0 1
 footprint=500mil
 T 42300 44800 5 10 1 1 0 0 1
-tolerance=20%
+tolerance=10%
 T 42300 44800 5 10 1 1 0 0 1
 comment=/
 }
@@ -412,7 +412,7 @@ value=10K
 T 45700 45400 5 10 0 1 0 0 1
 footprint=500mil
 T 45700 45400 5 10 1 1 0 0 1
-tolerance=20%
+tolerance=10%
 T 45700 45400 5 10 1 1 0 0 1
 comment=/
 }

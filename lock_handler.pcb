@@ -1,7 +1,7 @@
 # release: pcb 20091103
-# date:    Sun May 28 15:25:29 2023
+# date:    Fri Jun  2 15:55:13 2023
 # user:    bh (bh)
-# host:    @noreply.github.com
+# host:    noreply.github.com
 
 # To read pcb files, the pcb version (or the cvs source date) must be >= the file version
 FileVersion[20070407]
@@ -919,6 +919,10 @@ Via[123500 331000 3600 2000 0 2000 "" ""]
 Via[144500 318000 3600 2000 0 2000 "" ""]
 Via[201000 331000 3600 2000 0 2000 "" ""]
 Via[139000 313000 3600 2000 0 2000 "" ""]
+Via[42500 369000 3600 2000 0 2000 "" ""]
+Via[42500 379000 3600 2000 0 2000 "" ""]
+Via[116000 369000 3600 2000 0 2000 "" ""]
+Via[116000 379000 3600 2000 0 2000 "" ""]
 
 Element["" "generic" "U200" "DIL 14" 220000 276000 -3500 -42000 0 100 ""]
 (
@@ -1004,7 +1008,7 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R217"
 
 	)
 
-Element["" "capacitor_radial" "C204" "200" 280000 228500 -15000 10000 2 100 ""]
+Element["" "capacitor_radial" "C204" "200" 280000 228500 -22500 3000 1 100 ""]
 (
 	Pin[0 0 6000 3000 6600 3000 "1" "1" "square,edge2"]
 	Pin[-10000 0 6000 3000 6600 3000 "2" "2" "edge2"]
@@ -1224,7 +1228,7 @@ Element["" "LED, size in mm (pin 1 is +, 2 is -)" "LED4" "LED5" 163000 97500 -15
 
 	)
 
-Element["" "capacitor_radial" "C202" "200" 210000 308500 15000 -10000 0 100 ""]
+Element["" "capacitor_radial" "C202" "200" 210000 308500 -13000 5500 1 100 ""]
 (
 	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
 	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
@@ -1232,7 +1236,7 @@ Element["" "capacitor_radial" "C202" "200" 210000 308500 15000 -10000 0 100 ""]
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R210" "ACY500" 183000 293500 39500 6100 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R210" "ACY500" 183000 293500 17500 -11400 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1306,7 +1310,7 @@ Element["" "Mounting trought hole with clearance" "" "" 274500 42500 -9843 -9500
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R208" "ACY500" 230000 323500 39500 6100 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R208" "ACY500" 230000 323500 40500 -9400 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1319,16 +1323,13 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R208"
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R218" "ACY500" 40500 454500 39500 6100 0 100 ""]
+Element["" "Transistor" "Q200" "TO92" 148500 293500 1000 -13000 0 100 ""]
 (
-	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
-	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
-	ElementLine [12500 4100 12500 -4100 1000]
-	ElementLine [37500 4100 12500 4100 1000]
-	ElementLine [37500 -4100 37500 4100 1000]
-	ElementLine [12500 -4100 37500 -4100 1000]
-	ElementLine [37500 0 50000 0 1000]
-	ElementLine [0 0 12500 0 1000]
+	Pin[20000 0 7200 3000 7800 4200 "1" "1" "square,edge2"]
+	Pin[10000 0 7200 3000 7800 4200 "2" "2" "edge2"]
+	Pin[0 0 7200 3000 7800 4200 "3" "3" "edge2"]
+	ElementLine [3000 -7000 17000 -7000 1000]
+	ElementArc [10000 0 10000 10000 315 270 1000]
 
 	)
 
@@ -1384,7 +1385,7 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R203"
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R204" "ACY500" 133000 338500 39500 6100 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R204" "ACY500" 133000 338500 40000 -9900 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1397,7 +1398,7 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R204"
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R209" "ACY500" 230000 308500 30000 -11900 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R209" "ACY500" 230000 308500 19000 -11400 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1410,7 +1411,7 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R209"
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R205" "ACY500" 133000 323500 39500 6100 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R205" "ACY500" 133000 323500 40500 -9900 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1423,7 +1424,7 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R205"
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R206" "ACY500" 133000 308500 39500 6100 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R206" "ACY500" 133000 308500 41000 -9400 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1436,7 +1437,7 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R206"
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R207" "ACY500" 230000 338500 39500 6100 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R207" "ACY500" 230000 338500 41000 -9900 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1449,7 +1450,7 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R207"
 
 	)
 
-Element["" "capacitor_radial" "C200" "200" 210000 338500 15000 -10000 0 100 ""]
+Element["" "capacitor_radial" "C200" "200" 210000 338500 -13000 8000 1 100 ""]
 (
 	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
 	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
@@ -1457,7 +1458,7 @@ Element["" "capacitor_radial" "C200" "200" 210000 338500 15000 -10000 0 100 ""]
 
 	)
 
-Element["" "capacitor_radial" "C201" "200" 210000 323500 15000 -10000 0 100 ""]
+Element["" "capacitor_radial" "C201" "200" 210000 323500 -13000 6500 1 100 ""]
 (
 	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
 	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
@@ -1465,7 +1466,7 @@ Element["" "capacitor_radial" "C201" "200" 210000 323500 15000 -10000 0 100 ""]
 
 	)
 
-Element["" "capacitor_radial" "C206" "200" 280000 293500 2500 -13500 0 100 ""]
+Element["" "capacitor_radial" "C206" "200" 280000 293500 -22500 2500 1 100 ""]
 (
 	Pin[0 0 6000 3000 6600 3000 "1" "1" "square,edge2"]
 	Pin[-10000 0 6000 3000 6600 3000 "2" "2" "edge2"]
@@ -1481,17 +1482,20 @@ Element["" "capacitor_radial" "C205" "200" 46000 293500 15000 -10000 0 100 ""]
 
 	)
 
-Element["" "Transistor" "Q200" "TO92" 148500 293500 1000 -13000 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R218" "ACY500" 87000 467000 -6100 39500 3 100 ""]
 (
-	Pin[20000 0 7200 3000 7800 4200 "1" "1" "square,edge2"]
-	Pin[10000 0 7200 3000 7800 4200 "2" "2" "edge2"]
-	Pin[0 0 7200 3000 7800 4200 "3" "3" "edge2"]
-	ElementLine [3000 -7000 17000 -7000 1000]
-	ElementArc [10000 0 10000 10000 315 270 1000]
+	Pin[0 0 5500 3000 6100 3000 "1" "1" "square"]
+	Pin[0 50000 5500 3000 6100 3000 "2" "2" ""]
+	ElementLine [-4100 12500 4100 12500 1000]
+	ElementLine [-4100 12500 -4100 37500 1000]
+	ElementLine [-4100 37500 4100 37500 1000]
+	ElementLine [4100 12500 4100 37500 1000]
+	ElementLine [0 37500 0 50000 1000]
+	ElementLine [0 0 0 12500 1000]
 
 	)
 
-Element["" "Jumper, i.e. single row headers" "CONN_DISABLE" "JUMPER2" 256500 355500 -18500 8000 0 100 ""]
+Element["" "Jumper, i.e. single row headers" "CONN_DISABLE" "JUMPER2" 248000 365000 -17500 -13000 0 100 ""]
 (
 	Pin[0 0 6000 3000 6600 3800 "1" "1" "square,edge2"]
 	Pin[-10000 0 6000 3000 6600 3800 "2" "2" "edge2"]
@@ -1504,24 +1508,7 @@ Element["" "Jumper, i.e. single row headers" "CONN_DISABLE" "JUMPER2" 256500 355
 
 	)
 
-Element["" "Jumper, i.e. single row headers" "CONN_CHAIN_NEXT" "JUMPER6" 66000 367000 17000 -22500 0 100 ""]
-(
-	Pin[0 0 6000 3000 6600 3800 "1" "1" "square,edge2"]
-	Pin[10000 0 6000 3000 6600 3800 "2" "2" "edge2,thermal(0X,1X)"]
-	Pin[20000 0 6000 3000 6600 3800 "3" "3" "edge2"]
-	Pin[30000 0 6000 3000 6600 3800 "4" "4" "edge2,thermal(0X,1X)"]
-	Pin[40000 0 6000 3000 6600 3800 "5" "5" "edge2"]
-	Pin[50000 0 6000 3000 6600 3800 "6" "6" "edge2,thermal(0X,1X)"]
-	ElementLine [-5000 -5000 5000 -5000 1000]
-	ElementLine [5000 -5000 5000 5000 1000]
-	ElementLine [-5000 -5000 -5000 5000 1000]
-	ElementLine [-5000 -5000 55000 -5000 1000]
-	ElementLine [55000 -5000 55000 5000 1000]
-	ElementLine [-5000 5000 55000 5000 1000]
-
-	)
-
-Element["" "Bottom lead non-polar circular component (typically capacitor)" "C208" "RCY100" 77000 494500 15000 -10000 0 100 ""]
+Element["" "Bottom lead non-polar circular component (typically capacitor)" "C209" "RCY100" 124000 408000 15000 -10000 0 100 ""]
 (
 	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
 	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
@@ -1529,20 +1516,28 @@ Element["" "Bottom lead non-polar circular component (typically capacitor)" "C20
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R219" "ACY500" 40000 463500 39500 6100 0 100 ""]
+Element["" "Bottom lead non-polar circular component (typically capacitor)" "C208" "RCY100" 312000 412500 15000 -10000 0 100 ""]
 (
-	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
-	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
-	ElementLine [12500 4100 12500 -4100 1000]
-	ElementLine [37500 4100 12500 4100 1000]
-	ElementLine [37500 -4100 37500 4100 1000]
-	ElementLine [12500 -4100 37500 -4100 1000]
-	ElementLine [37500 0 50000 0 1000]
-	ElementLine [0 0 12500 0 1000]
+	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
+	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
+	ElementArc [5000 0 10000 10000 0 360 1000]
 
 	)
 
-Element["" "Mounting trought hole with clearance" "" "" 52500 521500 -9843 -9500 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R219" "ACY500" 76000 517000 15900 -60500 3 100 ""]
+(
+	Pin[0 0 5500 3000 6100 3000 "1" "1" "square"]
+	Pin[0 -50000 5500 3000 6100 3000 "2" "2" ""]
+	ElementLine [-4100 -12500 4100 -12500 1000]
+	ElementLine [4100 -37500 4100 -12500 1000]
+	ElementLine [-4100 -37500 4100 -37500 1000]
+	ElementLine [-4100 -37500 -4100 -12500 1000]
+	ElementLine [0 -50000 0 -37500 1000]
+	ElementLine [0 -12500 0 0 1000]
+
+	)
+
+Element["" "Mounting trought hole with clearance" "" "" 52500 544000 -9843 -9500 0 100 ""]
 (
 	Attribute("author" "pat-pgt")
 	Attribute("copyright" "pat-pgt")
@@ -1560,7 +1555,7 @@ Element["" "Mounting trought hole with clearance" "" "" 52500 521500 -9843 -9500
 
 	)
 
-Element["" "Transistor" "Q201" "TO220" 127500 456500 15000 23000 3 100 ""]
+Element["" "Transistor" "Q201" "TO220" 127500 479000 15000 23000 3 100 ""]
 (
 	Pin[10000 0 9000 3000 9600 6000 "1" "1" "square"]
 	Pin[0 0 9000 3000 9600 6000 "2" "2" ""]
@@ -1588,7 +1583,7 @@ Element["" "Transistor" "Q201" "TO220" 127500 456500 15000 23000 3 100 ""]
 
 	)
 
-Element["" "Transistor" "Q202" "TO220" 209000 457000 15000 23000 3 100 ""]
+Element["" "Transistor" "Q202" "TO220" 209000 479500 15000 23000 3 100 ""]
 (
 	Pin[10000 0 9000 3000 9600 6000 "1" "1" "square"]
 	Pin[0 0 9000 3000 9600 6000 "2" "2" ""]
@@ -1616,7 +1611,7 @@ Element["" "Transistor" "Q202" "TO220" 209000 457000 15000 23000 3 100 ""]
 
 	)
 
-Element["" "Axial diode (pin 1 is cathode)" "D203" "ALF300" 70000 415500 22000 -5000 0 100 ""]
+Element["" "Axial diode (pin 1 is cathode)" "D203" "ALF300" 70000 438000 28500 -10000 0 100 ""]
 (
 	Pin[30000 0 5000 3000 5600 2000 "1" "1" "square,edge2"]
 	Pin[0 0 5000 3000 5600 2000 "2" "2" "edge2"]
@@ -1629,7 +1624,7 @@ Element["" "Axial diode (pin 1 is cathode)" "D203" "ALF300" 70000 415500 22000 -
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R224" "ACY500" 149000 385500 40500 -9400 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R224" "ACY500" 149000 408000 34500 -11900 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1642,20 +1637,20 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R224"
 
 	)
 
-Element["" "Axial diode (pin 1 is cathode)" "D200" "ALF300" 44000 477500 22000 -5000 0 100 ""]
+Element["" "Axial diode (pin 1 is cathode)" "D200" "ALF300" 65000 511000 -5000 -22000 1 100 ""]
 (
-	Pin[0 0 5000 3000 5600 2000 "1" "1" "square,edge2"]
-	Pin[30000 0 5000 3000 5600 2000 "2" "2" "edge2"]
-	ElementLine [10000 -5000 10000 5000 1000]
-	ElementLine [20000 5000 10000 0 1000]
-	ElementLine [20000 -5000 20000 5000 1000]
-	ElementLine [10000 0 20000 -5000 1000]
-	ElementLine [20000 0 30000 0 1000]
-	ElementLine [0 0 10000 0 1000]
+	Pin[0 0 5000 3000 5600 2000 "1" "1" "square"]
+	Pin[0 -30000 5000 3000 5600 2000 "2" "2" ""]
+	ElementLine [-5000 -10000 5000 -10000 1000]
+	ElementLine [5000 -20000 0 -10000 1000]
+	ElementLine [-5000 -20000 5000 -20000 1000]
+	ElementLine [0 -10000 -5000 -20000 1000]
+	ElementLine [0 -30000 0 -20000 1000]
+	ElementLine [0 -10000 0 0 1000]
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R220" "ACY500" 59000 385500 12000 -9900 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R220" "ACY500" 59000 408000 1500 -10400 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1668,7 +1663,7 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R220"
 
 	)
 
-Element["" "Mounting trought hole with clearance" "" "" 274500 521500 -9843 -9500 0 100 ""]
+Element["" "Mounting trought hole with clearance" "" "" 274500 544000 -9843 -9500 0 100 ""]
 (
 	Attribute("author" "pat-pgt")
 	Attribute("copyright" "pat-pgt")
@@ -1686,7 +1681,7 @@ Element["" "Mounting trought hole with clearance" "" "" 274500 521500 -9843 -950
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R221" "ACY500" 59000 400500 41000 -9400 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R221" "ACY500" 59000 423000 1000 -10900 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1699,7 +1694,7 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R221"
 
 	)
 
-Element["" "Axial diode (pin 1 is cathode)" "D204" "ALF300" 70000 430500 22000 -5000 0 100 ""]
+Element["" "Axial diode (pin 1 is cathode)" "D204" "ALF300" 70000 453000 28000 -10500 0 100 ""]
 (
 	Pin[30000 0 5000 3000 5600 2000 "1" "1" "square,edge2"]
 	Pin[0 0 5000 3000 5600 2000 "2" "2" "edge2"]
@@ -1712,7 +1707,7 @@ Element["" "Axial diode (pin 1 is cathode)" "D204" "ALF300" 70000 430500 22000 -
 
 	)
 
-Element["" "Jumper, i.e. single row headers" "R228" "JUMPER5" 46000 385500 11000 -5000 3 100 ""]
+Element["" "Jumper, i.e. single row headers" "R228" "JUMPER5" 46000 408000 -12000 9000 1 100 ""]
 (
 	Pin[0 0 6000 3000 6600 3800 "1" "1" "square"]
 	Pin[0 10000 6000 3000 6600 3800 "2" "2" ""]
@@ -1728,7 +1723,7 @@ Element["" "Jumper, i.e. single row headers" "R228" "JUMPER5" 46000 385500 11000
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R225" "ACY500" 149000 400500 39500 -9400 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R225" "ACY500" 149000 423000 39500 -9400 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1741,7 +1736,7 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R225"
 
 	)
 
-Element["" "Axial diode (pin 1 is cathode)" "D201" "ALF300" 70000 385500 21500 -9500 0 100 ""]
+Element["" "Axial diode (pin 1 is cathode)" "D201" "ALF300" 70000 408000 26500 -10500 0 100 ""]
 (
 	Pin[30000 0 5000 3000 5600 2000 "1" "1" "square,edge2"]
 	Pin[0 0 5000 3000 5600 2000 "2" "2" "edge2"]
@@ -1754,7 +1749,7 @@ Element["" "Axial diode (pin 1 is cathode)" "D201" "ALF300" 70000 385500 21500 -
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R226" "ACY500" 149000 415500 40000 -9400 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R226" "ACY500" 149000 438000 40000 -9400 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1767,7 +1762,7 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R226"
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R227" "ACY500" 149000 431000 40000 -9400 0 100 ""]
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R227" "ACY500" 149000 453500 40000 -9400 0 100 ""]
 (
 	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
 	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
@@ -1780,7 +1775,107 @@ Element["" "Axial non-polar component (typically resistor or capacitor)," "R227"
 
 	)
 
-Element["" "Jumper, i.e. single row headers" "CONN_CHAIN" "JUMPER6" 66000 357000 -23000 -13000 0 100 ""]
+Element["" "Axial polar component (typically capacitor)," "" "ACY1000P" 273000 403000 -10300 77000 3 100 ""]
+(
+	Pin[0 0 8000 3000 8600 5000 "1" "1" "square"]
+	Pin[0 100000 8000 3000 8600 5000 "2" "2" ""]
+	ElementLine [7000 98000 7000 102000 1000]
+	ElementLine [7000 -2000 7000 2000 1000]
+	ElementLine [5000 0 9000 0 1000]
+	ElementLine [-8300 25000 8300 25000 1000]
+	ElementLine [-8300 25000 -8300 75000 1000]
+	ElementLine [-8300 75000 8300 75000 1000]
+	ElementLine [8300 25000 8300 75000 1000]
+	ElementLine [0 75000 0 100000 1000]
+	ElementLine [0 0 0 25000 1000]
+
+	)
+
+Element["" "Axial diode (pin 1 is cathode)" "D202" "ALF300" 70000 423000 26000 -10500 0 100 ""]
+(
+	Pin[30000 0 5000 3000 5600 2000 "1" "1" "square,edge2"]
+	Pin[0 0 5000 3000 5600 2000 "2" "2" "edge2"]
+	ElementLine [10000 -5000 10000 5000 1000]
+	ElementLine [20000 5000 10000 0 1000]
+	ElementLine [20000 -5000 20000 5000 1000]
+	ElementLine [10000 0 20000 -5000 1000]
+	ElementLine [20000 0 30000 0 1000]
+	ElementLine [0 0 10000 0 1000]
+
+	)
+
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R223" "ACY500" 59000 453000 -1500 -9900 0 100 ""]
+(
+	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
+	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
+	ElementLine [12500 4100 12500 -4100 1000]
+	ElementLine [37500 4100 12500 4100 1000]
+	ElementLine [37500 -4100 37500 4100 1000]
+	ElementLine [12500 -4100 37500 -4100 1000]
+	ElementLine [37500 0 50000 0 1000]
+	ElementLine [0 0 12500 0 1000]
+
+	)
+
+Element["" "Axial non-polar component (typically resistor or capacitor)," "R222" "ACY500" 59000 438000 -1000 -10400 0 100 ""]
+(
+	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
+	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
+	ElementLine [12500 4100 12500 -4100 1000]
+	ElementLine [37500 4100 12500 4100 1000]
+	ElementLine [37500 -4100 37500 4100 1000]
+	ElementLine [12500 -4100 37500 -4100 1000]
+	ElementLine [37500 0 50000 0 1000]
+	ElementLine [0 0 12500 0 1000]
+
+	)
+
+Element["" "Axial diode (pin 1 is cathode)" "D205" "ALF300" 156000 469500 22000 -5000 0 100 ""]
+(
+	Pin[30000 0 5000 3000 5600 2000 "1" "1" "square,edge2"]
+	Pin[0 0 5000 3000 5600 2000 "2" "2" "edge2"]
+	ElementLine [10000 -5000 10000 5000 1000]
+	ElementLine [20000 5000 10000 0 1000]
+	ElementLine [20000 -5000 20000 5000 1000]
+	ElementLine [10000 0 20000 -5000 1000]
+	ElementLine [20000 0 30000 0 1000]
+	ElementLine [0 0 10000 0 1000]
+
+	)
+
+Element["" "Bottom lead non-polar circular component (typically capacitor)" "C211" "RCY100" 124000 438000 15000 -10000 0 100 ""]
+(
+	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
+	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
+	ElementArc [5000 0 10000 10000 0 360 1000]
+
+	)
+
+Element["" "Bottom lead non-polar circular component (typically capacitor)" "C210" "RCY100" 124000 423000 15000 -10000 0 100 ""]
+(
+	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
+	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
+	ElementArc [5000 0 10000 10000 0 360 1000]
+
+	)
+
+Element["" "Bottom lead non-polar circular component (typically capacitor)" "C212" "RCY100" 124000 453000 15000 -10000 0 100 ""]
+(
+	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
+	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
+	ElementArc [5000 0 10000 10000 0 360 1000]
+
+	)
+
+Element["" "Bottom lead non-polar circular component (typically capacitor)" "C207" "RCY100" 45000 470500 15000 -10000 0 100 ""]
+(
+	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
+	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
+	ElementArc [5000 0 10000 10000 0 360 1000]
+
+	)
+
+Element["" "Jumper, i.e. single row headers" "CONN_CHAIN" "JUMPER6" 56000 369000 500 -13500 0 100 ""]
 (
 	Pin[0 0 6000 3000 6600 3800 "1" "1" "square,edge2"]
 	Pin[10000 0 6000 3000 6600 3800 "2" "2" "edge2,thermal(0X,1X)"]
@@ -1797,46 +1892,76 @@ Element["" "Jumper, i.e. single row headers" "CONN_CHAIN" "JUMPER6" 66000 357000
 
 	)
 
-Element["" "Axial diode (pin 1 is cathode)" "D202" "ALF300" 70000 400500 22000 -5000 0 100 ""]
+Element["" "Jumper, i.e. single row headers" "CONN_CHAIN_NEXT" "JUMPER6" 56000 379000 500 9000 0 100 ""]
 (
-	Pin[30000 0 5000 3000 5600 2000 "1" "1" "square,edge2"]
-	Pin[0 0 5000 3000 5600 2000 "2" "2" "edge2"]
-	ElementLine [10000 -5000 10000 5000 1000]
-	ElementLine [20000 5000 10000 0 1000]
-	ElementLine [20000 -5000 20000 5000 1000]
-	ElementLine [10000 0 20000 -5000 1000]
-	ElementLine [20000 0 30000 0 1000]
-	ElementLine [0 0 10000 0 1000]
+	Pin[0 0 6000 3000 6600 3800 "1" "1" "square,edge2"]
+	Pin[10000 0 6000 3000 6600 3800 "2" "2" "edge2,thermal(0X,1X)"]
+	Pin[20000 0 6000 3000 6600 3800 "3" "3" "edge2"]
+	Pin[30000 0 6000 3000 6600 3800 "4" "4" "edge2,thermal(0X,1X)"]
+	Pin[40000 0 6000 3000 6600 3800 "5" "5" "edge2"]
+	Pin[50000 0 6000 3000 6600 3800 "6" "6" "edge2,thermal(0X,1X)"]
+	ElementLine [-5000 -5000 5000 -5000 1000]
+	ElementLine [5000 -5000 5000 5000 1000]
+	ElementLine [-5000 -5000 -5000 5000 1000]
+	ElementLine [-5000 -5000 55000 -5000 1000]
+	ElementLine [55000 -5000 55000 5000 1000]
+	ElementLine [-5000 5000 55000 5000 1000]
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R223" "ACY500" 59000 430500 41000 -9400 0 100 ""]
+Element["" "Jumper, i.e. single row headers" "CONN_POWER_NEXT" "JUMPER8" 136000 379000 -5000 7500 0 100 ""]
 (
-	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
-	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
-	ElementLine [12500 4100 12500 -4100 1000]
-	ElementLine [37500 4100 12500 4100 1000]
-	ElementLine [37500 -4100 37500 4100 1000]
-	ElementLine [12500 -4100 37500 -4100 1000]
-	ElementLine [37500 0 50000 0 1000]
-	ElementLine [0 0 12500 0 1000]
+	Pin[0 0 6000 3000 6600 3800 "1" "1" "square,edge2,thermal(0X)"]
+	Pin[10000 0 6000 3000 6600 3800 "2" "2" "edge2,thermal(1X)"]
+	Pin[20000 0 6000 3000 6600 3800 "3" "3" "edge2,thermal(0X)"]
+	Pin[30000 0 6000 3000 6600 3800 "4" "4" "edge2,thermal(1X)"]
+	Pin[40000 0 6000 3000 6600 3800 "5" "5" "edge2,thermal(0X)"]
+	Pin[50000 0 6000 3000 6600 3800 "6" "6" "edge2,thermal(1X)"]
+	Pin[60000 0 6000 3000 6600 3800 "7" "7" "edge2,thermal(0X)"]
+	Pin[70000 0 6000 3000 6600 3800 "8" "8" "edge2,thermal(1X)"]
+	ElementLine [-5000 -5000 5000 -5000 1000]
+	ElementLine [5000 -5000 5000 5000 1000]
+	ElementLine [-5000 -5000 -5000 5000 1000]
+	ElementLine [-5000 -5000 75000 -5000 1000]
+	ElementLine [75000 -5000 75000 5000 1000]
+	ElementLine [-5000 5000 75000 5000 1000]
 
 	)
 
-Element["" "Axial non-polar component (typically resistor or capacitor)," "R222" "ACY500" 59000 415500 41500 -9400 0 100 ""]
+Element["" "Jumper, i.e. single row headers" "CONN_POWER" "JUMPER8" 136000 369000 -4500 -12500 0 100 ""]
 (
-	Pin[0 0 5500 3000 6100 3000 "1" "1" "square,edge2"]
-	Pin[50000 0 5500 3000 6100 3000 "2" "2" "edge2"]
-	ElementLine [12500 4100 12500 -4100 1000]
-	ElementLine [37500 4100 12500 4100 1000]
-	ElementLine [37500 -4100 37500 4100 1000]
-	ElementLine [12500 -4100 37500 -4100 1000]
-	ElementLine [37500 0 50000 0 1000]
-	ElementLine [0 0 12500 0 1000]
+	Pin[0 0 6000 3000 6600 3800 "1" "1" "square,edge2,thermal(0X)"]
+	Pin[10000 0 6000 3000 6600 3800 "2" "2" "edge2,thermal(1X)"]
+	Pin[20000 0 6000 3000 6600 3800 "3" "3" "edge2,thermal(0X)"]
+	Pin[30000 0 6000 3000 6600 3800 "4" "4" "edge2,thermal(1X)"]
+	Pin[40000 0 6000 3000 6600 3800 "5" "5" "edge2,thermal(0X)"]
+	Pin[50000 0 6000 3000 6600 3800 "6" "6" "edge2,thermal(1X)"]
+	Pin[60000 0 6000 3000 6600 3800 "7" "7" "edge2,thermal(0X)"]
+	Pin[70000 0 6000 3000 6600 3800 "8" "8" "edge2,thermal(1X)"]
+	ElementLine [-5000 -5000 5000 -5000 1000]
+	ElementLine [5000 -5000 5000 5000 1000]
+	ElementLine [-5000 -5000 -5000 5000 1000]
+	ElementLine [-5000 -5000 75000 -5000 1000]
+	ElementLine [75000 -5000 75000 5000 1000]
+	ElementLine [-5000 5000 75000 5000 1000]
 
 	)
 
-Element["" "Jumper, i.e. single row headers" "R229" "JUMPER5" 214000 425500 -11000 5000 1 100 ""]
+Element["" "Jumper, i.e. single row headers" "CONN_OUTPUT" "JUMPER3" 45000 488500 11000 -5000 3 100 ""]
+(
+	Pin[0 0 6000 3000 6600 3800 "1" "1" "square"]
+	Pin[0 10000 6000 3000 6600 3800 "2" "2" ""]
+	Pin[0 20000 6000 3000 6600 3800 "3" "3" ""]
+	ElementLine [5000 5000 5000 -5000 1000]
+	ElementLine [-5000 5000 5000 5000 1000]
+	ElementLine [5000 -5000 -5000 -5000 1000]
+	ElementLine [5000 25000 5000 -5000 1000]
+	ElementLine [-5000 25000 5000 25000 1000]
+	ElementLine [-5000 -5000 -5000 25000 1000]
+
+	)
+
+Element["" "Jumper, i.e. single row headers" "R229" "JUMPER5" 214000 453500 -11000 5000 1 100 ""]
 (
 	Pin[0 0 6000 3000 6600 3800 "1" "1" "square"]
 	Pin[0 -10000 6000 3000 6600 3800 "2" "2" ""]
@@ -1852,67 +1977,91 @@ Element["" "Jumper, i.e. single row headers" "R229" "JUMPER5" 214000 425500 -110
 
 	)
 
-Element["" "Bottom lead non-polar circular component (typically capacitor)" "C211" "RCY100" 124000 415500 15000 -10000 0 100 ""]
+Element["" "Jumper, i.e. single row headers" "R230" "JUMPER5" 214000 403500 -12000 7000 1 100 ""]
 (
-	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
-	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
-	ElementArc [5000 0 10000 10000 0 360 1000]
+	Pin[0 0 6000 3000 6600 3800 "1" "1" "square"]
+	Pin[0 10000 6000 3000 6600 3800 "2" "2" ""]
+	Pin[0 20000 6000 3000 6600 3800 "3" "3" ""]
+	Pin[0 30000 6000 3000 6600 3800 "4" "4" ""]
+	Pin[0 40000 6000 3000 6600 3800 "5" "5" ""]
+	ElementLine [5000 5000 5000 -5000 1000]
+	ElementLine [-5000 5000 5000 5000 1000]
+	ElementLine [5000 -5000 -5000 -5000 1000]
+	ElementLine [5000 45000 5000 -5000 1000]
+	ElementLine [-5000 45000 5000 45000 1000]
+	ElementLine [-5000 -5000 -5000 45000 1000]
 
 	)
 
-Element["" "Bottom lead non-polar circular component (typically capacitor)" "C210" "RCY100" 124000 400500 15000 -10000 0 100 ""]
+Element["" "Jumper, i.e. single row headers" "CONN_AB_POWER" "JUMPER7" 253500 387500 11000 -5000 3 100 ""]
 (
-	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
-	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
-	ElementArc [5000 0 10000 10000 0 360 1000]
+	Pin[0 0 6000 3000 6600 3800 "1" "1" "square"]
+	Pin[0 10000 6000 3000 6600 3800 "2" "2" ""]
+	Pin[0 20000 6000 3000 6600 3800 "3" "3" ""]
+	Pin[0 30000 6000 3000 6600 3800 "4" "4" ""]
+	Pin[0 40000 6000 3000 6600 3800 "5" "5" ""]
+	Pin[0 50000 6000 3000 6600 3800 "6" "6" ""]
+	Pin[0 60000 6000 3000 6600 3800 "7" "7" ""]
+	ElementLine [5000 5000 5000 -5000 1000]
+	ElementLine [-5000 5000 5000 5000 1000]
+	ElementLine [5000 -5000 -5000 -5000 1000]
+	ElementLine [5000 65000 5000 -5000 1000]
+	ElementLine [-5000 65000 5000 65000 1000]
+	ElementLine [-5000 -5000 -5000 65000 1000]
 
 	)
 
-Element["" "Bottom lead non-polar circular component (typically capacitor)" "C212" "RCY100" 124000 430500 15000 -10000 0 100 ""]
+Element["" "Jumper, i.e. single row headers" "CONN_AB_HARDSOFT" "JUMPER7" 237000 389000 11000 -5000 3 100 ""]
 (
-	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
-	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
-	ElementArc [5000 0 10000 10000 0 360 1000]
+	Pin[0 0 6000 3000 6600 3800 "1" "1" "square"]
+	Pin[0 10000 6000 3000 6600 3800 "2" "2" ""]
+	Pin[0 20000 6000 3000 6600 3800 "3" "3" ""]
+	Pin[0 30000 6000 3000 6600 3800 "4" "4" ""]
+	Pin[0 40000 6000 3000 6600 3800 "5" "5" ""]
+	Pin[0 50000 6000 3000 6600 3800 "6" "6" ""]
+	Pin[0 60000 6000 3000 6600 3800 "7" "7" ""]
+	ElementLine [5000 5000 5000 -5000 1000]
+	ElementLine [-5000 5000 5000 5000 1000]
+	ElementLine [5000 -5000 -5000 -5000 1000]
+	ElementLine [5000 65000 5000 -5000 1000]
+	ElementLine [-5000 65000 5000 65000 1000]
+	ElementLine [-5000 -5000 -5000 65000 1000]
 
 	)
-
-Element["" "Bottom lead non-polar circular component (typically capacitor)" "C209" "RCY100" 124000 385500 15000 -10000 0 100 ""]
-(
-	Pin[0 0 6000 3000 6600 3000 "1" "1" "square"]
-	Pin[10000 0 6000 3000 6600 3000 "2" "2" ""]
-	ElementArc [5000 0 10000 10000 0 360 1000]
-
-	)
-Rat[59000 430500 0 46000 425500 1  ""]
-Rat[70000 430500 0 101000 374000 1  ""]
-Rat[59000 415500 0 46000 415500 1  ""]
-Rat[70000 415500 0 91000 373500 1  ""]
-Rat[59000 400500 0 46000 405500 1  ""]
-Rat[70000 400500 0 81000 373500 1  ""]
-Rat[70000 385500 0 71000 372000 1  ""]
-Rat[59000 385500 0 46000 395500 1  ""]
-Rat[116500 341000 1 116000 357000 1  ""]
-Rat[60000 373000 0 46000 385500 1  ""]
-Rat[116000 367000 1 134000 385500 1  ""]
-Rat[134000 430500 1 117500 456500 1  ""]
-Rat[220000 338500 1 246500 355500 1  ""]
-Rat[117500 456500 1 87000 494500 1  ""]
-Rat[134000 430500 1 209000 457000 1  ""]
-Rat[63500 343500 1 40500 454500 1  ""]
-Rat[256500 355500 1 238000 343500 0  ""]
-Rat[124000 385500 0 149000 385500 1  ""]
-Rat[124000 400500 0 149000 400500 1  ""]
-Rat[124000 430500 0 149000 431000 1  ""]
-Rat[124000 415500 0 149000 415500 1  ""]
-Rat[199000 385500 1 214000 385500 1  ""]
-Rat[199000 385500 1 199000 431000 1  ""]
-Rat[199000 400500 1 214000 395500 1  ""]
-Rat[199000 415500 1 214000 405500 1  ""]
-Rat[137500 456500 1 90500 454500 1  ""]
-Rat[44000 477500 1 127500 456500 1  ""]
-Rat[74000 477500 1 90000 463500 1  ""]
-Rat[201000 347500 1 214000 425500 1  ""]
-Rat[199000 457000 1 77000 494500 1  ""]
+Rat[205500 399500 1 214000 403500 1  ""]
+Rat[29500 518000 1 45000 508500 1  ""]
+Rat[36000 458000 1 55000 470500 1  ""]
+Rat[134000 453000 1 117500 479000 1  ""]
+Rat[220000 338500 1 238000 365000 1  ""]
+Rat[214000 403500 1 253500 427500 1  ""]
+Rat[253500 427500 1 253500 437500 1  ""]
+Rat[253500 437500 1 253500 447500 1  ""]
+Rat[253500 447500 1 237000 449000 1  ""]
+Rat[237000 449000 1 209000 479500 1  ""]
+Rat[253500 427500 1 322000 412500 1  ""]
+Rat[65000 458500 1 87000 467000 1  ""]
+Rat[248000 365000 1 238000 343500 0  ""]
+Rat[237000 409000 1 214000 413500 1  ""]
+Rat[237000 419000 1 214000 423500 1  ""]
+Rat[237000 429000 1 214000 433500 1  ""]
+Rat[237000 439000 1 214000 443500 1  ""]
+Rat[214000 443500 1 199000 453500 1  ""]
+Rat[137500 479000 1 87000 517000 1  ""]
+Rat[45000 498500 1 65000 511000 1  ""]
+Rat[65000 511000 1 127500 479000 1  ""]
+Rat[65000 481000 1 76000 467000 1  ""]
+Rat[253500 387500 1 196000 379000 1  ""]
+Rat[179500 449000 0 156000 469500 1  ""]
+Rat[179500 449000 0 219000 479500 1  ""]
+Rat[156000 469500 1 76000 517000 1  ""]
+Rat[76000 517000 1 45000 488500 1  ""]
+Rat[36000 475500 0 45000 470500 1  ""]
+Rat[167500 446500 0 186000 469500 1  ""]
+Rat[186000 469500 1 199000 479500 1  ""]
+Rat[199000 479500 1 214000 453500 1  ""]
+Rat[214000 453500 1 253500 417500 1  ""]
+Rat[253500 417500 1 253500 407500 1  ""]
+Rat[253500 407500 1 312000 412500 1  ""]
 Layer(1 "component")
 (
 	Line[255000 174500 159500 174500 1000 2000 "clearline"]
@@ -2058,8 +2207,8 @@ Layer(1 "component")
 	Line[95000 327500 106000 338500 1800 2000 "clearline"]
 	Line[123500 331000 201000 331000 4000 2000 "clearline"]
 	Line[225000 328500 215000 328500 1800 2000 "clearline"]
-	Line[183000 338500 188500 344000 1800 2000 "clearline"]
-	Line[188500 344000 224500 344000 1800 2000 "clearline"]
+	Line[183000 338500 210000 338500 1800 2000 "clearline"]
+	Line[215500 344000 224500 344000 1800 2000 "clearline"]
 	Line[106000 323500 133000 323500 1800 2000 "clearline"]
 	Line[106000 338500 133000 338500 1800 2000 "clearline"]
 	Line[29500 300500 290500 300500 4000 2000 "clearline"]
@@ -2070,15 +2219,15 @@ Layer(1 "component")
 	Line[56000 338500 48000 338500 1800 2000 "clearline"]
 	Line[46000 308500 29500 308500 4000 2000 "clearline"]
 	Line[29500 338500 49000 338500 4000 2000 "clearline"]
-	Line[49000 338500 49000 315000 4000 2000 "clearline"]
+	Line[49000 358000 49000 315000 4000 2000 "clearline"]
 	Line[29500 315000 56000 315000 4000 2000 "clearline"]
 	Line[36500 308500 36500 315000 4000 2000 "clearline"]
 	Line[46000 308500 46000 315000 4000 2000 "clearline"]
-	Line[36000 315000 36000 338500 4000 2000 "clearline"]
-	Line[42500 338500 42500 315000 4000 2000 "clearline"]
+	Line[142000 460500 149000 453500 1800 2000 "clearline"]
+	Line[42500 358000 42500 315000 4000 2000 "clearline"]
 	Line[49000 322000 29500 322000 4000 2000 "clearline"]
 	Line[29500 330500 49000 330500 4000 2000 "clearline"]
-	Line[29500 338500 29500 308500 4000 2000 "clearline"]
+	Line[29500 433000 36000 433000 4000 2000 "clearline"]
 	Line[36500 199000 36500 246000 4000 2000 "clearline"]
 	Line[29500 153500 63000 153500 4000 2000 "clearline"]
 	Line[63000 153500 150000 153500 2500 2000 "clearline"]
@@ -2104,7 +2253,7 @@ Layer(1 "component")
 	Line[122500 287500 116500 293500 2500 2000 "clearline"]
 	Line[210000 308500 210000 314500 1400 2000 "clearline"]
 	Line[183000 323500 210000 323500 1800 2000 "clearline"]
-	Line[210000 338500 210000 344000 1400 2000 "clearline"]
+	Line[210000 338500 215500 344000 1400 2000 "clearline"]
 	Line[48500 221000 29500 221000 4000 2000 "clearline"]
 	Line[49500 287000 56000 293500 1800 2000 "clearline"]
 	Line[48500 221000 56000 228500 1800 2000 "clearline"]
@@ -2151,22 +2300,89 @@ Layer(1 "component")
 	Line[236000 318000 238000 320000 1800 2000 "clearline"]
 	Line[83000 327500 95000 327500 1800 2000 "clearline"]
 	Line[144500 318000 101000 318000 1000 2000 "clearline"]
-	Line[100000 415500 124000 415500 1800 2000 "clearline"]
-	Line[67500 355500 66000 357000 1800 2000 "clearline"]
-	Line[215000 328500 210000 323500 1800 2000 "clearline"]
-	Line[100000 400500 124000 400500 1800 2000 "clearline"]
-	Line[59000 430500 70000 430500 1800 2000 "clearline"]
-	Line[59000 400500 70000 400500 1800 2000 "clearline"]
-	Line[101000 318000 71000 324500 1000 2000 "clearline"]
-	Line[100000 385500 124000 385500 1800 2000 "clearline"]
-	Line[59000 385500 70000 385500 1800 2000 "clearline"]
 	Line[135000 315000 90000 315000 1000 2000 "clearline"]
 	Line[135000 315000 139000 313000 1000 2000 "clearline"]
-	Line[59000 415500 70000 415500 1800 2000 "clearline"]
-	Line[100000 430500 124000 430500 1800 2000 "clearline"]
+	Line[215000 328500 210000 323500 1800 2000 "clearline"]
+	Line[101000 318000 71000 324500 1000 2000 "clearline"]
+	Line[100000 438000 124000 438000 1800 2000 "clearline"]
+	Line[100000 453000 124000 453000 1800 2000 "clearline"]
+	Line[100000 423000 124000 423000 1800 2000 "clearline"]
+	Line[59000 453000 70000 453000 1800 2000 "clearline"]
+	Line[59000 423000 70000 423000 1800 2000 "clearline"]
+	Line[100000 408000 124000 408000 1800 2000 "clearline"]
+	Line[59000 408000 70000 408000 1800 2000 "clearline"]
+	Line[59000 438000 70000 438000 1800 2000 "clearline"]
+	Line[29500 345500 201000 345500 4000 2000 "clearline"]
+	Line[29500 351500 201000 351500 4000 2000 "clearline"]
+	Line[167500 392000 29500 392000 4000 2000 "clearline"]
+	Line[151000 331000 151000 358000 4000 2000 "clearline"]
+	Line[131500 460500 142000 460500 1800 2000 "clearline"]
+	Line[42500 392000 42500 399500 4000 2000 "clearline"]
+	Line[29500 412500 36000 412500 4000 2000 "clearline"]
+	Line[29500 423000 36000 423000 4000 2000 "clearline"]
+	Line[124000 408000 131500 415500 1800 2000 "clearline"]
+	Line[131500 415500 141500 415500 1800 2000 "clearline"]
+	Line[141500 415500 149000 408000 1800 2000 "clearline"]
+	Line[124000 423000 131000 430000 1800 2000 "clearline"]
+	Line[131000 430000 142000 430000 1800 2000 "clearline"]
+	Line[142000 430000 149000 423000 1800 2000 "clearline"]
+	Line[124000 438000 131500 445500 1800 2000 "clearline"]
+	Line[131500 445500 141500 445500 1800 2000 "clearline"]
+	Line[141500 445500 149000 438000 1800 2000 "clearline"]
+	Line[124000 453000 124000 453500 1800 2000 "clearline"]
+	Line[124000 453000 131500 460500 1800 2000 "clearline"]
+	Line[29500 308500 29500 477500 4000 2000 "clearline"]
+	Line[29500 443000 36000 443000 4000 2000 "clearline"]
+	Line[29500 453500 36000 453500 4000 2000 "clearline"]
+	Line[36000 315000 36000 475500 4000 2000 "clearline"]
+	Line[29500 369000 36000 369000 4000 2000 "clearline"]
+	Line[29500 379000 36000 379000 4000 2000 "clearline"]
+	Line[201000 358000 29500 358000 4000 2000 "clearline"]
+	Line[201000 345500 201000 358000 4000 2000 "clearline"]
+	Line[140500 331000 140500 358000 4000 2000 "clearline"]
+	Line[173500 331000 173500 358000 4000 2000 "clearline"]
+	Line[162500 331000 162500 358000 4000 2000 "clearline"]
+	Line[193500 345500 193500 358000 4000 2000 "clearline"]
+	Line[140500 338000 173500 338000 4000 2000 "clearline"]
+	Line[116500 345500 116500 358000 4000 2000 "clearline"]
+	Line[124000 345500 124000 399500 4000 2000 "clearline"]
+	Line[131500 345500 131500 358000 4000 2000 "clearline"]
+	Line[180500 345500 180500 358000 4000 2000 "clearline"]
+	Line[187000 345500 187000 358000 4000 2000 "clearline"]
+	Line[167500 399500 29500 399500 4000 2000 "clearline"]
+	Line[116500 392000 116500 399500 4000 2000 "clearline"]
+	Line[107500 392000 107500 399500 4000 2000 "clearline"]
+	Line[99000 392000 99000 399500 4000 2000 "clearline"]
+	Line[49500 392000 49500 399500 4000 2000 "clearline"]
+	Line[199000 438000 214000 433500 1800 2000 "clearline"]
+	Line[199000 423000 214000 423500 1800 2000 "clearline"]
+	Line[199000 408000 214000 413500 1800 2000 "clearline"]
+	Line[179500 388000 179500 449000 4000 2000 "clearline"]
+	Line[167500 392000 167500 446500 4000 2000 "clearline"]
+	Line[150500 392000 150500 399500 4000 2000 "clearline"]
+	Line[142000 392000 142000 399500 4000 2000 "clearline"]
+	Line[134000 392000 134000 399500 4000 2000 "clearline"]
+	Line[159500 392000 159500 399000 4000 2000 "clearline"]
+	Line[159500 392000 159500 399500 4000 2000 "clearline"]
 	Polygon("clearpoly")
 	(
-		[60000 351000] [122000 351000] [122000 373000] [60000 373000] 
+		[49500 362500] [112500 362500] [112500 385500] [49500 385500] 
+	)
+	Polygon("")
+	(
+		[40500 365000] [51000 365000] [51000 383000] [40500 383000] 
+	)
+	Polygon("")
+	(
+		[111500 366500] [118500 366500] [118500 382000] [111500 382000] 
+	)
+	Polygon("clearpoly")
+	(
+		[129500 362500] [212500 362500] [212500 385500] [129500 385500] 
+	)
+	Polygon("")
+	(
+		[174500 385000] [185000 385000] [185000 389500] [174500 389500] 
 	)
 )
 Layer(2 "solder")
@@ -2180,7 +2396,7 @@ Layer(2 "solder")
 	Line[133000 181000 123000 181000 1400 2000 "clearline"]
 	Line[183000 246000 183000 235500 1000 2000 "clearline"]
 	Line[193000 246000 193000 239000 1000 2000 "clearline"]
-	Line[116500 69000 116500 341000 4000 2000 "clearline"]
+	Line[187000 345500 187000 358000 4000 2000 "clearline"]
 	Line[193000 211000 203500 211000 1400 2000 "clearline"]
 	Line[143000 246000 143000 218000 1000 2000 "clearline"]
 	Line[153000 246000 153000 225000 1000 2000 "clearline"]
@@ -2212,7 +2428,7 @@ Layer(2 "solder")
 	Line[183000 181000 168000 196000 1000 2000 "clearline"]
 	Line[173000 181000 158000 196000 1000 2000 "clearline"]
 	Line[235000 186000 240000 181000 1000 2000 "clearline"]
-	Line[201000 304500 201000 347500 4000 2000 "clearline"]
+	Line[201000 304500 201000 331000 4000 2000 "clearline"]
 	Line[143000 181000 143000 201000 1000 2000 "clearline"]
 	Line[198000 185000 188000 195000 1000 2000 "clearline"]
 	Line[220000 181000 210000 181000 1400 2000 "clearline"]
@@ -2254,7 +2470,7 @@ Layer(2 "solder")
 	Line[270000 246000 275000 251000 1000 2000 "clearline"]
 	Line[211000 246000 210500 246500 1400 2000 "clearline"]
 	Line[193000 276000 204000 276000 1400 2000 "clearline"]
-	Line[123500 79000 123500 340500 4000 2000 "clearline"]
+	Line[123500 79000 123500 331000 4000 2000 "clearline"]
 	Line[91000 232000 91000 253000 1000 2000 "clearline"]
 	Line[91000 253000 86000 258000 1000 2000 "clearline"]
 	Line[86000 258000 86000 276000 1000 2000 "clearline"]
@@ -2371,7 +2587,7 @@ Layer(2 "solder")
 	Line[250000 276000 250000 293500 1000 2000 "clearline"]
 	Line[220000 288500 270000 338500 1000 2000 "clearline"]
 	Line[270000 338500 280000 338500 1000 2000 "clearline"]
-	Line[193500 301000 193500 348500 4000 2000 "clearline"]
+	Line[193500 301000 193500 358000 4000 2000 "clearline"]
 	Line[275000 251000 275000 303500 1000 2000 "clearline"]
 	Line[275000 303500 280000 308500 1000 2000 "clearline"]
 	Line[220000 276000 220000 288500 1000 2000 "clearline"]
@@ -2379,16 +2595,16 @@ Layer(2 "solder")
 	Line[245000 281500 233000 293500 1000 2000 "clearline"]
 	Line[219500 60500 237000 60500 4000 2000 "clearline"]
 	Line[134500 60500 191000 60500 4000 2000 "clearline"]
-	Line[81000 345500 81000 373500 1000 2000 "clearline"]
+	Line[53500 413500 46000 418000 1400 2000 "clearline"]
 	Line[139000 282000 139000 313000 1000 2000 "clearline"]
 	Line[111500 332500 106000 323500 1800 2000 "clearline"]
 	Line[36500 308500 46000 308500 4000 2000 "clearline"]
 	Line[29500 322000 49000 322000 4000 2000 "clearline"]
-	Line[29500 79000 29500 346500 4000 2000 "clearline"]
-	Line[36000 315000 36000 338500 4000 2000 "clearline"]
-	Line[49000 338500 49000 315000 4000 2000 "clearline"]
+	Line[29500 79000 29500 518000 4000 2000 "clearline"]
+	Line[36000 315000 36000 458000 4000 2000 "clearline"]
+	Line[29500 345500 49000 345500 4000 2000 "clearline"]
 	Line[49000 315000 29500 315000 4000 2000 "clearline"]
-	Line[42500 315000 42500 338500 4000 2000 "clearline"]
+	Line[42500 379000 29500 379000 4000 2000 "clearline"]
 	Line[49000 338500 29500 338500 4000 2000 "clearline"]
 	Line[49000 330500 29500 330500 4000 2000 "clearline"]
 	Line[43000 172000 43000 129000 4000 2000 "clearline"]
@@ -2401,7 +2617,7 @@ Layer(2 "solder")
 	Line[43000 141500 60500 141500 4000 2000 "clearline"]
 	Line[43000 153500 54000 153500 4000 2000 "clearline"]
 	Line[43000 161000 54000 161000 4000 2000 "clearline"]
-	Line[106000 357000 106000 367000 1800 2000 "clearline"]
+	Line[96000 369000 96000 379000 1800 2000 "clearline"]
 	Line[219500 52500 237000 52500 4000 2000 "clearline"]
 	Line[51000 216000 51000 297500 1000 2000 "clearline"]
 	Line[51000 297500 54000 300500 1000 2000 "clearline"]
@@ -2440,24 +2656,102 @@ Layer(2 "solder")
 	Line[133000 276000 139000 282000 1000 2000 "clearline"]
 	Line[142000 289500 142000 307000 1000 2000 "clearline"]
 	Line[63500 302500 63500 343500 1000 2000 "clearline"]
-	Line[96000 276000 96000 324000 1000 2000 "clearline"]
-	Line[96000 324000 101000 344000 1000 2000 "clearline"]
+	Line[96000 276000 96000 350000 1000 2000 "clearline"]
+	Line[59000 408000 53500 413500 1400 2000 "clearline"]
 	Line[144500 316000 142000 307000 1000 2000 "clearline"]
-	Line[123500 340500 127000 344000 4000 2000 "clearline"]
-	Line[66000 357000 66000 367000 1800 2000 "clearline"]
-	Line[83000 336500 86000 342500 1800 2000 "clearline"]
-	Line[83000 293500 83000 336500 1800 2000 "clearline"]
-	Line[86000 367000 86000 342500 1800 2000 "clearline"]
-	Line[78000 311500 78000 340000 1000 2000 "clearline"]
-	Line[78000 340000 81000 345500 1000 2000 "clearline"]
-	Line[101000 344000 101000 374000 1000 2000 "clearline"]
+	Line[65000 400500 50000 386500 1000 2000 "clearline"]
+	Line[54500 448500 46000 448000 1400 2000 "clearline"]
+	Line[59000 453000 54500 448500 1400 2000 "clearline"]
+	Line[83000 293500 83000 346500 1800 2000 "clearline"]
+	Line[76000 369000 83000 346500 1800 2000 "clearline"]
+	Line[78000 311500 78000 346000 1000 2000 "clearline"]
+	Line[61000 385500 70000 398000 1000 2000 "clearline"]
+	Line[76000 369000 76000 379000 1800 2000 "clearline"]
 	Line[111500 332500 111500 344500 1800 2000 "clearline"]
-	Line[111500 344500 106000 357000 1800 2000 "clearline"]
-	Line[90000 315000 90000 326500 1000 2000 "clearline"]
-	Line[90000 326500 91000 333000 1000 2000 "clearline"]
-	Line[91000 333000 91000 373500 1000 2000 "clearline"]
-	Line[71000 324500 71000 372000 1000 2000 "clearline"]
-	Line[134000 385500 134000 430500 1800 2000 "clearline"]
+	Line[111500 344500 96000 369000 1800 2000 "clearline"]
+	Line[90000 315000 90000 347500 1000 2000 "clearline"]
+	Line[124000 345500 124000 399500 4000 2000 "clearline"]
+	Line[50000 362000 50000 386500 1000 2000 "clearline"]
+	Line[65000 400500 65000 458500 1000 2000 "clearline"]
+	Line[63500 343500 50000 362000 1000 2000 "clearline"]
+	Line[56000 369000 56000 379000 1800 2000 "clearline"]
+	Line[70000 398000 70000 408000 1000 2000 "clearline"]
+	Line[77500 402000 77500 412500 1000 2000 "clearline"]
+	Line[77500 412500 70000 423000 1000 2000 "clearline"]
+	Line[85000 402500 85000 417000 1000 2000 "clearline"]
+	Line[85000 417000 70000 438000 1000 2000 "clearline"]
+	Line[92500 403000 92500 421500 1000 2000 "clearline"]
+	Line[92500 421500 70000 453000 1000 2000 "clearline"]
+	Line[91000 383500 92500 403000 1000 2000 "clearline"]
+	Line[81000 384000 85000 402500 1000 2000 "clearline"]
+	Line[71000 384500 77500 402000 1000 2000 "clearline"]
+	Line[134000 399500 134000 392000 4000 2000 "clearline"]
+	Line[59000 438000 46000 438000 1400 2000 "clearline"]
+	Line[59000 423000 53000 423000 1400 2000 "clearline"]
+	Line[53000 423000 46000 428000 1400 2000 "clearline"]
+	Line[71000 324500 71000 344000 1000 2000 "clearline"]
+	Line[71000 344000 61000 363500 1000 2000 "clearline"]
+	Line[78000 346000 71000 363000 1000 2000 "clearline"]
+	Line[90000 347500 81000 365500 1000 2000 "clearline"]
+	Line[96000 350000 91000 365000 1000 2000 "clearline"]
+	Line[61000 363500 61000 385500 1000 2000 "clearline"]
+	Line[71000 384500 71000 363000 1000 2000 "clearline"]
+	Line[81000 384000 81000 365500 1000 2000 "clearline"]
+	Line[91000 383500 91000 365000 1000 2000 "clearline"]
+	Line[29500 369000 42500 369000 4000 2000 "clearline"]
+	Line[29500 399500 42500 399500 4000 2000 "clearline"]
+	Line[42500 315000 42500 369000 4000 2000 "clearline"]
+	Line[29500 358000 42500 358000 4000 2000 "clearline"]
+	Line[49000 315000 49000 351500 4000 2000 "clearline"]
+	Line[29500 443000 36000 443000 4000 2000 "clearline"]
+	Line[29500 453500 36000 453500 4000 2000 "clearline"]
+	Line[29500 412500 36000 412500 4000 2000 "clearline"]
+	Line[29500 423000 36000 423000 4000 2000 "clearline"]
+	Line[29500 433000 36000 433000 4000 2000 "clearline"]
+	Line[42500 369000 42500 399500 4000 2000 "clearline"]
+	Line[29500 392000 42500 392000 4000 2000 "clearline"]
+	Line[46000 408000 36500 408000 1800 2000 "clearline"]
+	Line[49000 351500 29500 351500 4000 2000 "clearline"]
+	Line[140500 338000 173500 338000 4000 2000 "clearline"]
+	Line[116500 358000 201000 358000 4000 2000 "clearline"]
+	Line[201000 351500 116500 351500 4000 2000 "clearline"]
+	Line[193500 331000 140500 331000 4000 2000 "clearline"]
+	Line[140500 331000 140500 358000 4000 2000 "clearline"]
+	Line[151000 331000 151000 358000 4000 2000 "clearline"]
+	Line[162500 331000 162500 358000 4000 2000 "clearline"]
+	Line[173500 331000 173500 358000 4000 2000 "clearline"]
+	Line[134000 453000 134000 399500 1800 2000 "clearline"]
+	Line[116500 345500 201000 345500 4000 2000 "clearline"]
+	Line[131500 345500 131500 358000 4000 2000 "clearline"]
+	Line[180500 345500 180500 358000 4000 2000 "clearline"]
+	Line[116500 69000 116500 399500 4000 2000 "clearline"]
+	Line[99000 392000 99000 399500 4000 2000 "clearline"]
+	Line[213000 392000 99000 392000 4000 2000 "clearline"]
+	Line[205500 399500 99000 399500 4000 2000 "clearline"]
+	Line[107500 392000 107500 399500 4000 2000 "clearline"]
+	Line[159500 392000 159500 456000 4000 2000 "clearline"]
+	Line[167500 392000 167500 455500 4000 2000 "clearline"]
+	Line[142000 392000 142000 399500 4000 2000 "clearline"]
+	Line[150500 392000 150500 399500 4000 2000 "clearline"]
+	Line[205500 399500 205500 392000 4000 2000 "clearline"]
+	Line[195500 392000 195500 399500 4000 2000 "clearline"]
+	Line[177000 392000 177000 399500 4000 2000 "clearline"]
+	Polygon("clearpoly")
+	(
+		[129500 362500] [212500 362500] [212500 385500] [129500 385500] 
+	)
+	Polygon("")
+	(
+		[111000 366500] [118500 366500] [118500 382000] [111000 382000] 
+	)
+	Polygon("")
+	(
+		[123500 366500] [130500 366500] [130500 382000] [123500 382000] 
+	)
+	Polygon("")
+	(
+		[185000 384500] [189000 384500] [189000 400500] [185000 400500] 
+	)
 )
 Layer(3 "GND")
 (
@@ -2479,15 +2773,19 @@ Layer(8 "signal4")
 )
 Layer(9 "outline")
 (
-	Line[22500 521000 22500 22500 600 1200 "clearline"]
+	Line[22500 564000 22500 22500 600 1200 "clearline"]
 	Line[32500 12500 294500 12500 600 1200 "clearline"]
 	Line[304500 22500 304500 351500 600 1200 "clearline"]
+	Line[32500 574000 276000 574000 600 1200 "clearline"]
 	Arc[32500 22500 10000 10000 600 1200 -90 90 "clearline"]
 	Arc[294500 22500 10000 10000 600 1200 -90 -90 "clearline"]
+	Arc[32500 564000 10000 10000 600 1200 0 90 "clearline"]
 )
 Layer(10 "box_meca")
 (
 	Line[336000 94500 336000 488000 600 1200 "clearline"]
+	Line[331000 94500 341000 94500 600 1200 "clearline"]
+	Line[331000 488000 341000 488000 600 1200 "clearline"]
 	Arc[76000 97500 10000 10000 1000 2000 90 -90 "clearline"]
 	Arc[76000 97500 10000 10000 1000 2000 0 -90 "clearline"]
 	Arc[75998 97502 10002 10002 1000 2000 -90 -90 "clearline"]
@@ -2527,28 +2825,28 @@ Layer(11 "silk")
 )
 Layer(12 "silk")
 (
-	Line[157000 451000 157000 540000 600 1200 "clearline"]
-	Line[97500 524000 97500 454500 600 1200 "clearline"]
-	Line[99500 543500 155000 543500 600 1200 "clearline"]
-	Line[101000 443500 155500 443500 600 1200 "clearline"]
-	Line[238500 451500 238500 540500 600 1200 "clearline"]
-	Line[179000 524500 179000 455000 600 1200 "clearline"]
-	Line[181000 544000 236500 544000 600 1200 "clearline"]
-	Line[182500 444000 237000 444000 600 1200 "clearline"]
-	Text[83500 126500 0 100 "G" ""]
-	Text[169500 126500 0 100 "B" ""]
-	Text[259000 122000 0 100 "G" ""]
-	Text[256000 69500 0 100 "A" ""]
-	Text[169500 70000 0 100 "A" ""]
-	Text[83000 69500 0 100 "A" ""]
-	Text[136000 31500 0 100 "R" ""]
-	Text[223500 31500 0 100 "R" ""]
+	Line[157000 473500 157000 562500 600 1200 "clearline"]
+	Line[97500 546500 97500 477000 600 1200 "clearline"]
+	Line[99500 566000 155000 566000 600 1200 "clearline"]
+	Line[101000 466000 155500 466000 600 1200 "clearline"]
+	Line[238500 474000 238500 563000 600 1200 "clearline"]
+	Line[179000 547000 179000 477500 600 1200 "clearline"]
+	Line[181000 566500 236500 566500 600 1200 "clearline"]
+	Line[182500 466500 237000 466500 600 1200 "clearline"]
+	Text[80000 125000 0 100 "Green" ""]
+	Text[168000 125500 0 100 "Blue" ""]
+	Text[266000 129000 0 100 "Green" ""]
+	Text[264500 77500 0 100 "Amber" ""]
+	Text[178500 78000 0 100 "Amber" ""]
+	Text[78500 72500 0 100 "Amber" ""]
+	Text[177000 169000 0 100 "74HC10" ""]
+	Text[220500 31000 0 100 "Red" ""]
 	Text[176000 234000 0 100 "74HC04" ""]
 	Text[263000 169000 0 100 "74HC04" ""]
 	Text[237000 234000 0 100 "74HC132" ""]
 	Text[89000 169000 0 100 "74HC02" ""]
 	Text[89000 234000 0 100 "74HC02" ""]
-	Text[177000 169000 0 100 "74HC10" ""]
+	Text[131500 30500 0 100 "Red" ""]
 )
 NetList()
 (
@@ -2595,7 +2893,12 @@ NetList()
 		Connect("C210-2")
 		Connect("C211-2")
 		Connect("C212-2")
-		Connect("CONN_AB_HARDSOFT-5")
+		Connect("C213-2")
+		Connect("C214-2")
+		Connect("CONN_AB_HARDSOFT-7")
+		Connect("CONN_AB_POWER-5")
+		Connect("CONN_AB_POWER-6")
+		Connect("CONN_AB_POWER-7")
 		Connect("CONN_CHAIN-2")
 		Connect("CONN_CHAIN-4")
 		Connect("CONN_CHAIN-6")
@@ -2603,6 +2906,15 @@ NetList()
 		Connect("CONN_CHAIN_NEXT-4")
 		Connect("CONN_CHAIN_NEXT-6")
 		Connect("CONN_DISABLE-2")
+		Connect("CONN_OUTPUT-3")
+		Connect("CONN_POWER-2")
+		Connect("CONN_POWER-4")
+		Connect("CONN_POWER-6")
+		Connect("CONN_POWER-8")
+		Connect("CONN_POWER_NEXT-2")
+		Connect("CONN_POWER_NEXT-4")
+		Connect("CONN_POWER_NEXT-6")
+		Connect("CONN_POWER_NEXT-8")
 		Connect("LED1-2")
 		Connect("LED2-2")
 		Connect("LED3-2")
@@ -2615,6 +2927,7 @@ NetList()
 		Connect("Q202-2")
 		Connect("R201-1")
 		Connect("R228-1")
+		Connect("R230-1")
 		Connect("U200-7")
 		Connect("U201-7")
 		Connect("U202-7")
@@ -2751,7 +3064,7 @@ NetList()
 	(
 		Connect("CONN_CHAIN-1")
 		Connect("CONN_CHAIN_NEXT-1")
-		Connect("R230-1")
+		Connect("R233-1")
 	)
 	Net("unnamed_net1" "(unknown)")
 	(
@@ -2914,27 +3227,31 @@ NetList()
 	)
 	Net("unnamed_net30" "(unknown)")
 	(
-		Connect("CONN_AB_HARDSOFT-1")
+		Connect("CONN_AB_HARDSOFT-3")
 		Connect("R224-2")
-		Connect("R227-2")
 		Connect("R229-5")
+		Connect("R230-2")
 	)
 	Net("unnamed_net31" "(unknown)")
 	(
-		Connect("CONN_AB_HARDSOFT-2")
+		Connect("CONN_AB_HARDSOFT-4")
 		Connect("R225-2")
 		Connect("R229-4")
+		Connect("R230-3")
 	)
 	Net("unnamed_net32" "(unknown)")
 	(
-		Connect("CONN_AB_HARDSOFT-3")
+		Connect("CONN_AB_HARDSOFT-5")
 		Connect("R226-2")
 		Connect("R229-3")
+		Connect("R230-4")
 	)
 	Net("unnamed_net33" "(unknown)")
 	(
-		Connect("CONN_AB_HARDSOFT-4")
+		Connect("CONN_AB_HARDSOFT-6")
+		Connect("R227-2")
 		Connect("R229-2")
+		Connect("R230-5")
 	)
 	Net("unnamed_net34" "(unknown)")
 	(
@@ -2943,6 +3260,7 @@ NetList()
 	)
 	Net("unnamed_net35" "(unknown)")
 	(
+		Connect("CONN_OUTPUT-2")
 		Connect("D200-1")
 		Connect("Q201-2")
 	)
@@ -2953,8 +3271,34 @@ NetList()
 	)
 	Net("unnamed_net37" "(unknown)")
 	(
+		Connect("C213-1")
+		Connect("CONN_AB_POWER-1")
+		Connect("CONN_OUTPUT-1")
+		Connect("CONN_POWER-1")
+		Connect("CONN_POWER-3")
+		Connect("CONN_POWER-5")
+		Connect("CONN_POWER-7")
+		Connect("CONN_POWER_NEXT-1")
+		Connect("CONN_POWER_NEXT-3")
+		Connect("CONN_POWER_NEXT-5")
+		Connect("CONN_POWER_NEXT-7")
 		Connect("D205-2")
 		Connect("Q202-1")
+		Connect("R219-1")
+	)
+	Net("unnamed_net38" "(unknown)")
+	(
+		Connect("CONN_AB_HARDSOFT-2")
+		Connect("R231-1")
+	)
+	Net("unnamed_net39" "(unknown)")
+	(
+		Connect("CONN_AB_HARDSOFT-1")
+		Connect("R232-1")
+	)
+	Net("unnamed_net40" "(unknown)")
+	(
+		Connect("CONN_AB_POWER-2")
 	)
 	Net("Vcc" "(unknown)")
 	(
@@ -2964,12 +3308,17 @@ NetList()
 		Connect("C206-1")
 		Connect("C207-1")
 		Connect("C208-1")
+		Connect("C214-1")
+		Connect("CONN_AB_POWER-3")
+		Connect("CONN_AB_POWER-4")
 		Connect("D205-1")
 		Connect("Q202-3")
 		Connect("R200-1")
 		Connect("R202-1")
 		Connect("R229-1")
-		Connect("R230-2")
+		Connect("R231-2")
+		Connect("R232-2")
+		Connect("R233-2")
 		Connect("U200-2")
 		Connect("U200-5")
 		Connect("U200-10")
