@@ -8,6 +8,14 @@ Please note, it is an early version, it may refer to outdated or not yet updated
 The PCB is standard for all the configurations or modes. However, some assembly or components differs, see 3.
 The plated drills should be used.
 
+1-1-1) Bottom silk
+This plane is optional but contains some assembly data
+
+1-1-2) Outline
+This plane is optional.
+* However round corners are always nice to have.
+* However internal milling provides 2 holes. It is used to make some "sewing" with the wires to avoid they break while handling the board. 
+
 1-2) Heat-Sinks
 The board is designed for basic "U" TO-220 heat-sinks.
 For the output transistor, it should be always OK as it is ON or OFF.
@@ -25,7 +33,7 @@ The voltage is not that critics. It relies on 3 rules.
 If the power supply voltage is low (e.g. 6V with a 5V regulator), a low drop out should be used. The 7805 and 7806 are not that high drop out, and can be used on a power supply voltage down to 9V.
 
 1-4) LEDs
-The LED are drawn on the component side silk. Since through hole components are used, the copper side silk may be omitted for cost reasons. Due to the size of the TO200 heat-sinks, the LED with stoppers may be used, the LED may be mounted on the copper side and/or some 3D printed separators may be designed.
+High efficiency LEDS should be used as the current is directly drawn from the 74HCxx. The LED are drawn on the component side silk. Since through hole components are used, the copper side silk may be omitted for cost reasons. Due to the size of the TO200 heat-sinks, the LED with stoppers may be used, the LED may be mounted on the copper side and/or some 3D printed separators may be designed.
 The square pad is the anode (the long pin) of the LED.
 The red colour should NOT be exchanged with another colour and vice versa.
 
@@ -43,6 +51,7 @@ The precision of most of the components is about 10% or 20%.
 Round values in the E6, or even E3, series could have been used. I prefer to take values in the E96 series to avoid some resistors differ only by one colour (e.g. 1K 10K). I understand some shops apply the rule they are all 1% metallic film but the outside E12 are more expensive. Is it still the case? Does the price of the resistors a large ratio of the entire configuration and the mechanical parts?
 Without any letter, the resistors values are Ohms
 With a post-fix letter, the decade follows the Spice simulation software rules (K=kilo, m=mili, meg=mega, u=micro, p=pico). 
+
 
 
 2) Inter modules connections
@@ -64,6 +73,8 @@ If they are connected to each other by construction, this intermediary state is 
 
 2-5) Ring button
 For some configurations, a ring button can be used. If it is not used or wired without the module, the pin 1 (CONN_CHAIN) and its pair pin 2 can be omitted. There is no facility provided other than a pull-up resistor. One additional board, with a partial wiring, (see 7) can be built to use the filtering and the Schmidt trigger.
+
+
 
 3) Input connections, PCB assembly
 
@@ -93,14 +104,41 @@ In such case, the input receives levels between Vdd and Vcc.
 The diodes D201 to D204 have to be installed.
 The network resistors should be 4x 4.7K.
 
+
+
 5) Input connections
 
 
 
 6) Output connections
-The relay, electromagnet, pneumatic solenoid valve is powered directly on the supply.
-Then the voltage is the coil one.
-For practical reasons, the coil is connected to the CONN_COIL connector.
+The relay, electromagnet, pneumatic solenoid valve is powered directly on the supply, before the voltage regulators.
+Then the supply voltage of the boards is the coil one.
+For practical reasons, the 2 wires of the coil are connected to the CONN_COIL connector.
 If it is polarized, the square is the plus.
+The third pin is a ground one. It is intended to use an external charge pump, or every set that require some supply.
+
+
 
 7) Special mounting
+Since the price of small PCB is mostly fixed charge for the order, one more PCB can be ordered for accessory functions.
+The disabled input should never be used.
+
+7-1) Hard and soft A detection feature not used
+There is 2 assembly options for R222 and R223 and for D202 and D204, which provide spare holes. By placing a strap, hard and soft are connected together. It should be where it is written D202.
+The input capacitor and resistance should be omitted, R226 and C211 if A hard input is used, R227 and C212 if A soft input is used.
+
+7-2) Hard and soft B detection feature not used
+There is 2 assembly options for R220 and R221 and for D201 and D202, which provide spare holes. By placing a strap, hard and soft are connected together. It should be where it is written D204.
+The input capacitor and resistance should be omitted, R224 and C209 if B hard input is used, R225 and C210 if B soft input is used.
+
+7-3) Q200 omitted
+A and B, hard and soft input have no effect on the detection daisy chain.
+The board can be used as a display for an operator. It can be used when the opening should not unlock everything.
+The behavior is close to the regular one. The difference is when it is locked, the 2 green not-ready are still active (if so). This couldn't happened with normal assembly as a non-ready will unlock. If the detections are OK, the 2 ready amber LED behave as usual (off when locked). 
+
+7-3) Ring buttons receiver
+Since the buttons work with a pull up, their pin 1 of CONN_CHAIN can be connected to pin 3/4 or 5/6 of CONN_AB_HARDSOFT (see 7-1 or 7-2) of the display board. The green LED always illuminates when a button is pressed.
+
+7-4) Ring buttons or all-ready bell
+If R218 is omitted, a wire can connect the transistor IN PLACE of every LED. The first end is the pin of R218 closest to the border. The second end is the square pin of the LED.
+

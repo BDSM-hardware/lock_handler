@@ -24,10 +24,12 @@ It is a component.
 * The output is a transistor. The user can add the power circuits needed against the lock chosen (electro magnet, pneumatic output etc...).
 * The board is designed to run in stand alone mode with switches directly cconnected or with an additional board. It is mostly a metal detector style circuit. However, some components differs.
 
-There is no circuit to program, no PIC, noFPGA, noCPLD etc... It works as soon as the 74HCxx and other components are soldered.
+There is no circuit to program, no PIC, noFPGA, noCPLD etc... It works as soon as the 74HCxx and other components are soldered. It uses through hole components, not SMD.
 
 Some VHDL files are provided to describe the behaviour in a more human-readable way.
 A test is provided to check the truth table is the same for both the behaviour file and the file exported from the schematic.
 
-A PCB has been partially drawn. The most tricky part is routed. A schematic diagram has been added for the decouplings, for the IC power and for voltage regulator. The size of the PCB is, today, mostly known. It uses through hole components, not SMD.
-
+TODO
+* More verification
+* Add instructions using the bottom silk
+* Build a prototype
