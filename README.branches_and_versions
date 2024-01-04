@@ -1,0 +1,11 @@
+The master branch contains the RC of the 2 detections inputs.
+The lock_handler_4 branch contains the EARLY design of the 4 detections inputs.
+Please note, in that branch, many files are outdated.
+
+The 2 inputs has been tricky because the logic 74HC circuits contains 3, 4 or 6 logical gates. One can use a NOR for a NAND, but it consumes 3/4 of the circuit. Then some optimisations make the design more difficult to understand.
+The 4 input version is more easy to design as relevant circuits can be used, each 1/4 for each channel. That makes the design more easy to understand.
+
+The first design says it uses 10 circuits, rather than 6 and about 4 gates are unused.
+
+I am going to make effort to automatize the numerical test. I may make effort to synthesise (using free software tools) the numerical part as well. If somebody wants to try DYI Asic circuits (+-150 transistors), feel free to send feedback. 
+However, I don't have any estimation of the release date.
