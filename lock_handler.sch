@@ -408,7 +408,7 @@ device=RESISTOR
 T 45700 45700 5 10 1 1 0 0 1
 refdes=R210
 T 46200 45700 5 10 1 1 0 0 1
-value=10K
+value=2.7K
 T 45700 45400 5 10 0 1 0 0 1
 footprint=500mil
 T 45700 45400 5 10 0 1 0 0 1
