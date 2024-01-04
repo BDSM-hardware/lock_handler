@@ -3,6 +3,24 @@ use IEEE.Std_Logic_1164.all;
 
 
 package Utils_74HC is
+  component HC7400
+    port (
+      P1  :  in std_logic;
+      P2  :  in std_logic;
+      P3  : out std_logic;
+      P4  :  in std_logic;
+      P5  :  in std_logic;
+      P6  : out std_logic;
+      P10 :  in std_logic;
+      P8  : out std_logic;
+      P9  :  in std_logic;
+      P13 :  in std_logic;
+      P11 : out std_logic;
+      P12 :  in std_logic;
+      P7  : inout std_logic;
+      P14 : inout std_logic
+      );
+  end component HC7400;
   component HC7402
     port (
       P1  : out std_logic;
@@ -57,6 +75,23 @@ package Utils_74HC is
       P14 : inout std_logic
       );
   end component HC7410;
+    component HC7420
+    port (
+      P1  :  in std_logic;
+      P2  :  in std_logic;
+      P4  :  in std_logic;
+      P5  :  in std_logic;
+      P6  : out std_logic;
+      P10 :  in std_logic;
+      P8  : out std_logic;
+      P9  :  in std_logic;
+      P13 :  in std_logic;
+      P12 :  in std_logic;
+      P7  : inout std_logic;
+      P14 : inout std_logic
+      );
+  end component HC7420;
+
   component HC74132
     port (
       P1  :  in std_logic;
@@ -77,6 +112,42 @@ package Utils_74HC is
   end component HC74132;
 
 end package Utils_74HC;
+
+library IEEE;
+use IEEE.Std_Logic_1164.all;
+entity HC7400 is
+    port (
+      P1  :  in std_logic;
+      P2  :  in std_logic;
+      P3  : out std_logic;
+      P4  :  in std_logic;
+      P5  :  in std_logic;
+      P6  : out std_logic;
+      P9  :  in std_logic;
+      P10 :  in std_logic;
+      P8  : out std_logic;
+      P12 :  in std_logic;
+      P13 :  in std_logic;
+      P11 : out std_logic;
+      P7  : inout std_logic;
+      P14 : inout std_logic
+      );
+end entity HC7400;
+
+architecture arch of HC7400 is
+begin
+  P7 <= 'L';
+  P14 <= 'H';
+  main_proc : process( P1, P2, P4, P5, P9, P10, P12, P13 )
+    begin
+      P3 <= not ( P1 and P2 );
+      P6 <= not ( P4 and P5 );
+      P8 <= not ( P9 and P10 );
+      P11 <= not ( P12 and P13 );
+    end process main_proc;
+
+end architecture arch;
+
 
 library IEEE;
 use IEEE.Std_Logic_1164.all;
