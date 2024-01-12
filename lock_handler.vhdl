@@ -10,212 +10,179 @@ use IEEE.Std_Logic_1164.all;
 
 -- Secondary unit
 ARCHITECTURE netlist OF lock_handler IS
-    
-    
 
-    
-    
 
-    
-    
 
-    
-    
 
-    
-    
 
-    SIGNAL unnamed_net24 : Std_Logic;
     SIGNAL unnamed_net23 : Std_Logic;
     SIGNAL unnamed_net22 : Std_Logic;
     SIGNAL unnamed_net21 : Std_Logic;
-    
-    
-    
     SIGNAL unnamed_net20 : Std_Logic;
     SIGNAL unnamed_net19 : Std_Logic;
     SIGNAL unnamed_net18 : Std_Logic;
-    
-    
     SIGNAL unnamed_net17 : Std_Logic;
     SIGNAL unnamed_net16 : Std_Logic;
-    
-    
-    
     SIGNAL unnamed_net15 : Std_Logic;
-    
     SIGNAL unnamed_net14 : Std_Logic;
-    
-    
-    
     SIGNAL unnamed_net13 : Std_Logic;
-    
-    
     SIGNAL unnamed_net12 : Std_Logic;
     SIGNAL unnamed_net11 : Std_Logic;
-    
     SIGNAL unnamed_net10 : Std_Logic;
-    
     SIGNAL unnamed_net9 : Std_Logic;
     SIGNAL unnamed_net8 : Std_Logic;
-    SIGNAL lock_cmd : Std_Logic;
     SIGNAL unnamed_net7 : Std_Logic;
     SIGNAL unnamed_net6 : Std_Logic;
     SIGNAL unnamed_net5 : Std_Logic;
-    
-    
     SIGNAL unnamed_net4 : Std_Logic;
+    SIGNAL lock_cmd : Std_Logic;
     SIGNAL unnamed_net3 : Std_Logic;
     SIGNAL unnamed_net2 : Std_Logic;
     SIGNAL N_in_locked : Std_Logic;
-    
-    
     SIGNAL N_in_not_disabled : Std_Logic;
     SIGNAL N_in_ready : Std_Logic;
     SIGNAL N_in_not_ready : Std_Logic;
-    
     SIGNAL unnamed_net1 : Std_Logic;
     SIGNAL GND : Std_Logic;
-    
     SIGNAL Vcc : Std_Logic;
     SIGNAL N_in_not_locked : Std_Logic;
 BEGIN
-	Vcc<='1';
-	GND<='0';
+Vcc<='H';
+GND<='L';
 -- Architecture statement part
+    U7 : HC7400
+    PORT MAP (
+        P11	=>	unnamed_net22,
+        P13	=>	N_in_not_locked,
+        P12	=>	unnamed_net2,
+        P14	=>	Vcc,
+        P7	=>	GND,
+        P8	=>	unnamed_net10,
+        P10	=>	unnamed_net22,
+        P9	=>	C_soft,
+        P3	=>	unnamed_net23,
+        P2	=>	N_in_not_locked,
+        P1	=>	unnamed_net3,
+        P6	=>	unnamed_net8,
+        P5	=>	unnamed_net23,
+        P4	=>	D_soft);
+
+    U8 : HC7400
+    PORT MAP (
+        P11	=>	unnamed_net20,
+        P13	=>	N_in_not_locked,
+        P12	=>	unnamed_net14,
+        P14	=>	Vcc,
+        P7	=>	GND,
+        P8	=>	unnamed_net6,
+        P10	=>	unnamed_net20,
+        P9	=>	A_soft,
+        P3	=>	unnamed_net21,
+        P2	=>	N_in_not_locked,
+        P1	=>	unnamed_net15,
+        P6	=>	unnamed_net4,
+        P5	=>	unnamed_net21,
+        P4	=>	B_soft);
+
     U5 : HC7400
     PORT MAP (
-        P3	=>	unnamed_net9,
+        P3	=>	unnamed_net5,
         P2	=>	N_in_not_ready,
         P1	=>	N_in_not_disabled,
         P14	=>	Vcc,
         P7	=>	GND,
-        P6	=>	unnamed_net20,
+        P6	=>	unnamed_net16,
         P5	=>	N_in_not_disabled,
         P4	=>	N_in_locked,
         P8	=>	N_locked,
-        P10	=>	unnamed_net20,
-        P9	=>	unnamed_net20,
-        P11	=>	lock_cmd,
-        P13	=>	unnamed_net20,
-        P12	=>	unnamed_net20);
-
-    U8 : HC7402
-    PORT MAP (
-        P9	=>	A_hard,
-        P8	=>	N_in_locked,
         P10	=>	unnamed_net16,
-        P14	=>	Vcc,
-        P7	=>	GND,
-        P12	=>	unnamed_net17,
-        P11	=>	unnamed_net16,
-        P13	=>	unnamed_net10,
-        P6	=>	B_hard,
-        P5	=>	N_in_locked,
-        P4	=>	unnamed_net18,
-        P3	=>	unnamed_net19,
-        P2	=>	unnamed_net18,
-        P1	=>	unnamed_net8);
+        P9	=>	unnamed_net16,
+        P11	=>	lock_cmd,
+        P13	=>	unnamed_net16,
+        P12	=>	unnamed_net16);
 
     U4 : HC7420
     PORT MAP (
-        P6	=>	LP_out_pulldown_not_ready,
-        P5	=>	unnamed_net11,
-        P1	=>	unnamed_net14,
-        P2	=>	unnamed_net13,
-        P4	=>	unnamed_net12,
+        P8	=>	LP_out_pulldown_not_ready,
+        P13	=>	unnamed_net12,
+        P9	=>	unnamed_net7,
+        P10	=>	unnamed_net9,
+        P12	=>	unnamed_net11,
         P14	=>	Vcc,
         P7	=>	GND,
-        P8	=>	unnamed_net15,
-        P13	=>	N_in_not_disabled,
-        P9	=>	N_in_ready,
-        P10	=>	N_in_ready,
-        P12	=>	N_in_not_locked);
+        P6	=>	unnamed_net13,
+        P5	=>	N_in_not_disabled,
+        P1	=>	N_in_ready,
+        P2	=>	N_in_ready,
+        P4	=>	N_in_not_locked);
 
     U3 : HC7404
     PORT MAP (
-        P13	=>	unnamed_net11,
+        P13	=>	unnamed_net7,
         P12	=>	N_D_not_ready,
         P7	=>	GND,
         P14	=>	Vcc,
-        P1	=>	unnamed_net12,
+        P1	=>	unnamed_net9,
         P2	=>	N_C_not_ready,
-        P11	=>	unnamed_net13,
+        P11	=>	unnamed_net11,
         P10	=>	N_B_not_ready,
-        P3	=>	unnamed_net14,
-        P4	=>	N_B_not_ready,
-        P9	=>	unnamed_net15,
+        P5	=>	unnamed_net12,
+        P6	=>	N_A_not_ready,
+        P9	=>	unnamed_net13,
         P8	=>	N_all_ready,
-        P5	=>	N_in_not_disabled,
-        P6	=>	N_disabled);
+        P3	=>	N_in_not_disabled,
+        P4	=>	N_disabled);
 
     U1 : HC7400
     PORT MAP (
-        P11	=>	unnamed_net11,
+        P11	=>	unnamed_net7,
         P13	=>	N_in_not_disabled,
-        P12	=>	unnamed_net7,
+        P12	=>	unnamed_net8,
         P14	=>	Vcc,
         P7	=>	GND,
-        P3	=>	unnamed_net12,
+        P3	=>	unnamed_net9,
         P2	=>	N_in_not_disabled,
-        P1	=>	unnamed_net4,
-        P6	=>	unnamed_net14,
+        P1	=>	unnamed_net10,
+        P6	=>	unnamed_net12,
         P5	=>	N_in_not_disabled,
-        P4	=>	unnamed_net10,
-        P8	=>	unnamed_net13,
+        P4	=>	unnamed_net6,
+        P8	=>	unnamed_net11,
         P10	=>	N_in_not_disabled,
-        P9	=>	unnamed_net8);
+        P9	=>	unnamed_net4);
 
     U2 : HC7402
     PORT MAP (
-        P9	=>	unnamed_net8,
-        P8	=>	unnamed_net9,
+        P9	=>	unnamed_net4,
+        P8	=>	unnamed_net5,
         P10	=>	N_B_ready,
         P14	=>	Vcc,
         P7	=>	GND,
-        P6	=>	unnamed_net10,
-        P5	=>	unnamed_net9,
+        P6	=>	unnamed_net6,
+        P5	=>	unnamed_net5,
         P4	=>	N_A_ready,
-        P12	=>	unnamed_net7,
-        P11	=>	unnamed_net9,
+        P12	=>	unnamed_net8,
+        P11	=>	unnamed_net5,
         P13	=>	N_D_ready,
-        P3	=>	unnamed_net4,
-        P2	=>	unnamed_net9,
+        P3	=>	unnamed_net10,
+        P2	=>	unnamed_net5,
         P1	=>	N_C_ready);
 
     U6 : HC7404
     PORT MAP (
-        P1	=>	C_soft,
-        P2	=>	unnamed_net3,
+        P1	=>	C_hard,
+        P2	=>	unnamed_net2,
         P7	=>	GND,
         P14	=>	Vcc,
-        P13	=>	D_soft,
-        P12	=>	unnamed_net6,
-        P3	=>	A_soft,
-        P4	=>	unnamed_net17,
-        P11	=>	B_soft,
-        P10	=>	unnamed_net19,
-        P5	=>	unnamed_net23,
-        P6	=>	unnamed_net24,
-        P9	=>	unnamed_net24,
-        P8	=>	OPEN);
-
-    U7 : HC7402
-    PORT MAP (
-        P9	=>	C_hard,
-        P8	=>	N_in_locked,
-        P10	=>	unnamed_net2,
-        P14	=>	Vcc,
-        P7	=>	GND,
+        P13	=>	D_hard,
         P12	=>	unnamed_net3,
-        P11	=>	unnamed_net2,
-        P13	=>	unnamed_net4,
-        P6	=>	D_hard,
-        P5	=>	N_in_locked,
-        P4	=>	unnamed_net5,
-        P3	=>	unnamed_net6,
-        P2	=>	unnamed_net5,
-        P1	=>	unnamed_net7);
+        P3	=>	A_hard,
+        P4	=>	unnamed_net14,
+        P11	=>	B_hard,
+        P10	=>	unnamed_net15,
+        P5	=>	GND,
+        P6	=>	unnamed_net19,
+        P9	=>	unnamed_net19,
+        P8	=>	OPEN);
 
     U10 : HC7404
     PORT MAP (
@@ -227,12 +194,12 @@ BEGIN
         P8	=>	N_in_not_disabled,
         P11	=>	N_in_not_locked,
         P10	=>	N_in_locked,
-        P1	=>	GND,
-        P2	=>	unnamed_net21,
-        P3	=>	unnamed_net21,
-        P4	=>	unnamed_net22,
-        P5	=>	unnamed_net22,
-        P6	=>	unnamed_net23);
+        P1	=>	unnamed_net17,
+        P2	=>	unnamed_net18,
+        P3	=>	unnamed_net18,
+        P4	=>	N_E_ring,
+        P5	=>	unnamed_net18,
+        P6	=>	LP_out_ring);
 
     U9 : HC74132
     PORT MAP (
@@ -247,9 +214,9 @@ BEGIN
         P3	=>	N_in_not_ready,
         P2	=>	Vcc,
         P1	=>	LP_in_ready,
-        P11	=>	OPEN,
-        P13	=>	GND,
-        P12	=>	GND);
+        P11	=>	unnamed_net17,
+        P13	=>	Vcc,
+        P12	=>	E_ring);
 
 -- Signal assignment part
 END netlist;

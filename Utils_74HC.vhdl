@@ -254,6 +254,35 @@ begin
       P8 <= not ( P9 and P10 and P11 );
     end process main_proc;
 end architecture arch;
+library IEEE;
+use IEEE.Std_Logic_1164.all;
+entity HC7420 is
+    port (
+      P1  :  in std_logic;
+      P2  :  in std_logic;
+      P4  :  in std_logic;
+      P5  :  in std_logic;
+      P6  : out std_logic;
+      P13 :  in std_logic;
+      P12 :  in std_logic;
+      P10 :  in std_logic;
+      P9  :  in std_logic;
+      P8  : out std_logic;
+      P7  : inout std_logic;
+      P14 : inout std_logic
+      );
+end entity HC7420;
+
+architecture arch of HC7420 is
+begin
+  P7 <= 'L';
+  P14 <= 'H';
+  main_proc : process( P1, P2, P4, P5, P9, P10, P12, P13 )
+    begin
+      P6 <= not ( P1 and P2 and P4 and P5 );
+      P8 <= not ( P9 and P10 and P12 and P13 );
+    end process main_proc;
+end architecture arch;
       
 library IEEE;
 use IEEE.Std_Logic_1164.all;

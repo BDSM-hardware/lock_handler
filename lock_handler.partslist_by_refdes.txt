@@ -34,6 +34,7 @@ LED1	LED	C503B-BCN	/	bleue	5.08	1
 LED10	LED	C503B-ACN	/	amber	5.08	1
 LED11	LED	C503B-RCN	/	red	5.08	1
 LED12	LED	C503B-RCN	/	red	5.08	1
+LED13	LED	C503B-BCN	/	red	5.08	1
 LED2	LED	C503B-GCN	/	green	5.08	1
 LED3	LED	C503B-ACN	/	amber	5.08	1
 LED4	LED	C503B-GCN	/	green	5.08	1
@@ -64,8 +65,6 @@ R208	RESISTOR	22.1	10%	/	500mil	1
 R209	RESISTOR	unknown	10%	/	500mil	1
 R21	RESISTOR	1.15K	10%, R211 to R217 diff 1%	/	500mil	1
 R210	RESISTOR	2.7K	10%	/	500mil	1
-R216	RESISTOR	1.15K	10%, R211 to R217 diff 1%	/	500mil	1
-R217	RESISTOR	1.15K	10%, R211 to R217 diff 1%	/	500mil	1
 R218	RESISTOR	1.15K	10%	/	500mil	1
 R219	RESISTOR	1K	10%	value half the lock device resistance	500mil	1
 R22	RESISTOR	1.15K	10%, R211 to R217 diff 1%	/	500mil	1
@@ -79,10 +78,13 @@ R226	RESISTOR	22.1	10%	/	500mil	1
 R227	RESISTOR	22.1	10%	/	500mil	1
 R228	RESISTORPACK_5	4.7K	10%, diff. 10%	Elec detec. only	2.54	1
 R229	RESISTORPACK_5	4.7K	10%, diff. 10%	NC Switch detec. only	2.54	1
+R23	RESISTOR	1.15K	10%, R211 to R217 diff 1%	/	500mil	1
 R230	RESISTORPACK_5	10K	10%, diff. 10%	NO Switch detec. only	2.54	1
 R231	RESISTOR	22.1	10%	NO Switch detec. only	500mil	1
 R232	RESISTOR	22.1	10%	NO Switch detec. only	500mil	1
 R233	RESISTOR	10K	10%	/	500mil	1
+R24	RESISTOR	1.15K	10%, R211 to R217 diff 1%	/	500mil	1
+R25	RESISTOR	1.15K	10%, R211 to R217 diff 1%	/	500mil	1
 U1	7400	unknown	unknown	unknown	DIP14	1
 U10	7404	74HC04	/	/	DIP14	1
 U2	7402	unknown	unknown	unknown	DIP14	1

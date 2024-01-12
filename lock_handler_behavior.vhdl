@@ -27,7 +27,10 @@ package lock_handler_pac is
       N_locked : out Std_Logic;
       N_all_ready : out Std_Logic;
       N_disabled : out Std_Logic;
-      LP_out_pulldown_not_ready : out std_logic
+      LP_out_pulldown_not_ready : out std_logic;
+      E_ring : in Std_Logic;
+      N_E_ring : out Std_Logic;
+      LP_out_ring : out std_logic
       );
   end component lock_handler;
 end package lock_handler_pac;
@@ -61,14 +64,20 @@ entity lock_handler is
     N_locked : out Std_Logic;
     N_all_ready : out Std_Logic;
     N_disabled : out Std_Logic;
-    LP_out_pulldown_not_ready : out std_logic
+    LP_out_pulldown_not_ready : out std_logic;
+    E_ring : in Std_Logic;
+    N_E_ring : out Std_Logic;
+    LP_out_ring : out std_logic
 );
 end entity lock_handler;
 
 
 architecture behaviour of lock_handler is
 begin
-  main_proc : process ( D_hard, D_soft, C_hard, C_soft, B_hard, B_soft, A_hard, A_soft, LP_in_ready, LP_in_disabled, LP_in_locked )
+  N_E_ring <= not E_ring;
+  LP_out_ring <= not E_ring;
+
+  main_proc : process ( D_hard, D_soft, C_hard, C_soft, B_hard, B_soft, A_hard, A_soft, LP_in_ready, LP_in_disabled, LP_in_locked, E_ring )
     variable A_hard_soft, B_hard_soft, C_hard_soft, D_hard_soft : std_logic;
   begin
       disable_test : if LP_in_disabled = '1' then
@@ -78,7 +87,7 @@ begin
           -- Check if A and B soft are still OK
           N_locked <= '1';
           N_all_ready <= '0';
-          if A_soft = '1' and B_soft = '1' then
+          if A_soft = '1' and B_soft = '1' and C_soft = '1' and D_soft = '1' then
             LP_out_pulldown_not_ready <= '0';
           else
             LP_out_pulldown_not_ready <= '1';
@@ -108,8 +117,8 @@ begin
           end if;
           A_hard_soft := A_soft and A_hard;
           B_hard_soft := B_soft and B_hard;
-          C_hard_soft := C_soft and A_hard;
-          D_hard_soft := D_soft and B_hard;
+          C_hard_soft := C_soft and C_hard;
+          D_hard_soft := D_soft and D_hard;
         end if lock_test;
         -- Now handle the LEDS
         leds_test : if LP_in_ready = '1' then
