@@ -51,9 +51,9 @@ $(DESTDIR)simul : $(SRCDIR)lock_handler.vhdl
 	$(GHDL_PROG) -r test_1
 
 synth_ice40	:
-	$(GHDL_PROG) -a $(SRCTDIR)lock_handler.vhdl
+	$(GHDL_PROG) -a $(SRCTDIR)lock_handler_behavior.vhdl
 	$(YOSYS_PROG) -m ghdl -p '$(GHDL_PROG) lock_handler; synth_ice40 -json $(SYNTHDESTDIR)lock_handler.ice40.json' 
-	$(NEXTPNR-ICE40_PROG) --lp384 --package cm49 --top lock_handler --asc $(SYNTHDESTDIR)lock_handler.asc --json $(SYNTHDESTDIR)lock_handler.ice40.json --placed-svg $(SYNTHDESTDIR)lock_handler.placed.svg --routed-svg $(SYNTHDESTDIR)lock_handler.routed.svg --report $(SYNTHDESTDIR)lock_handler.report.json
+	$(NEXTPNR-ICE40_PROG) --lp384 --package cm49 --freq 1.00 --top lock_handler --asc $(SYNTHDESTDIR)lock_handler.asc --json $(SYNTHDESTDIR)lock_handler.ice40.json --placed-svg $(SYNTHDESTDIR)lock_handler.placed.svg --routed-svg $(SYNTHDESTDIR)lock_handler.routed.svg --report $(SYNTHDESTDIR)lock_handler.report.json
 	$(ICEPACK) $(SYNTHDESTDIR)lock_handler.asc $(SYNTHDESTDIR)lock_handler.bin
 
 synth_xilinx	:
