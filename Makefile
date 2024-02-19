@@ -22,11 +22,11 @@ pcb			: $(DESTDIR)lock_handler.net
 schemas		: $(DESTDIR)sch_build_date
 
 
-$(DESTDIR)lock_handler.partslist_by_refdes.txt : $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_io.sch 
-	$(NETLIST_PROG) -g partslist1 -o $(DESTDIR)lock_handler.partslist_by_refdes.txt $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_io.sch 
+$(DESTDIR)lock_handler.partslist_by_refdes.txt : $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_io.sch $(SRCDIR)lock_handler_detec.sch
+	$(NETLIST_PROG) -g partslist1 -o $(DESTDIR)lock_handler.partslist_by_refdes.txt $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_io.sch $(SRCDIR)lock_handler_detec.sch 
 
-$(DESTDIR)lock_handler.partslist_by_value.txt : $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_io.sch 
-	$(NETLIST_PROG) -g partslist3 -o $(DESTDIR)lock_handler.partslist_by_value.txt $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_io.sch 
+$(DESTDIR)lock_handler.partslist_by_value.txt : $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_io.sch $(SRCDIR)lock_handler_detec.sch
+	$(NETLIST_PROG) -g partslist3 -o $(DESTDIR)lock_handler.partslist_by_value.txt $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_io.sch $(SRCDIR)lock_handler_detec.sch 
 
 $(DESTDIR)lock_handler.vhdl : $(SRCDIR)lock_handler.sch
 	$(NETLIST_PROG) -g vhdl -o $(DESTDIR)lock_handler.vhdl $(SRCDIR)lock_handler.sch
@@ -68,9 +68,9 @@ synth_easic:
 
 
 
-$(DESTDIR)lock_handler.net : $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_io.sch $(SRCDIR)lock_handler_env.sch
-	$(NETLIST_PROG) -g PCB -o $(DESTDIR)lock_handler.net $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_io.sch
-
+$(DESTDIR)lock_handler.net : $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_io.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_detec.sch
+	$(NETLIST_PROG) -g PCB -o $(DESTDIR)lock_handler.net $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_io.sch $(SRCDIR)lock_handler_detec.sch
+	sed -i -r "s/Q([12])-B/Q\1-2/g;s/Q([12])-E/Q\1-1/g;s/Q([12])-C/Q\1-3/g" $(DESTDIR)lock_handler.net
 
 $(DESTDIR)sch_build_date	: $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_io.sch $(SRCDIR)lock_handler_env.sch 
 	$(EXPORT_PROG) export -o $(DESTDIR)lock_handler.ps $(SRCDIR)lock_handler.sch
@@ -79,6 +79,8 @@ $(DESTDIR)sch_build_date	: $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_io.sc
 	$(EXPORT_PROG) export -o $(DESTDIR)lock_handler_env.pdf $(SRCDIR)lock_handler_env.sch
 	$(EXPORT_PROG) export -o $(DESTDIR)lock_handler_io.ps $(SRCDIR)lock_handler_io.sch
 	$(EXPORT_PROG) export -o $(DESTDIR)lock_handler_io.pdf $(SRCDIR)lock_handler_io.sch
+	$(EXPORT_PROG) export -o $(DESTDIR)lock_handler_detec.ps $(SRCDIR)lock_handler_detec.sch
+	$(EXPORT_PROG) export -o $(DESTDIR)lock_handler_detec.pdf $(SRCDIR)lock_handler_detec.sch
 
 
 
