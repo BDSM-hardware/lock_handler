@@ -70,7 +70,7 @@ synth_easic:
 
 $(DESTDIR)lock_handler.net : $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_io.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_detec.sch
 	$(NETLIST_PROG) -g PCB -o $(DESTDIR)lock_handler.net $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_env.sch $(SRCDIR)lock_handler_io.sch $(SRCDIR)lock_handler_detec.sch
-	sed -i -r "s/Q([12])-B/Q\1-2/g;s/Q([12])-E/Q\1-1/g;s/Q([12])-C/Q\1-3/g" $(DESTDIR)lock_handler.net
+	sed -i -r "s/Q([12])-B/Q\1-2/g;s/Q([12])-E/Q\1-1/g;s/Q([12])-C/Q\1-3/g;s/Q3-B/Q3-1/;s/Q3-C/Q3-2/;s/Q3-E/Q3-3/" $(DESTDIR)lock_handler.net
 
 $(DESTDIR)sch_build_date	: $(SRCDIR)lock_handler.sch $(SRCDIR)lock_handler_io.sch $(SRCDIR)lock_handler_env.sch 
 	$(EXPORT_PROG) export -o $(DESTDIR)lock_handler.ps $(SRCDIR)lock_handler.sch
