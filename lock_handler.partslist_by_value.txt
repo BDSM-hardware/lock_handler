@@ -7,15 +7,17 @@
 74132	74HC132	/	/	DIP14	1	U9
 7420	unknown	unknown	unknown	DIP14	1	U4
 7806	7806	/	7805 or 7806	TO220	1	U14
-7906	unknown	unknown	Neg supply only	unknown	1	U15
-CAPACITOR	2.2uF	20%	MLCC	2.54	6	C15 C16 C17 C18 C19 C20
+7809	unknown	unknown	unknown	TO220	1	U16
+7906	unknown	unknown	Neg supply only	TO220	1	U15
+CAPACITOR	1uF	unknown	unknown	unknown	4	C27 C28 C29 C30
+CAPACITOR	2.2uF	20%	MLCC	2.54	8	C15 C16 C17 C18 C19 C20 C21 C22
 CAPACITOR	4.7uF	20%	/	100mil	3	C1 C2 C6
 CAPACITOR	4.7uF	unknown	unknown	100mil	3	C3 C4 C5
 CONNECTOR_2	/	/	/	SIP2N	1	CONN_DISABLE
 CONNECTOR_2	unknown	unknown	Neg supply to ground	SIP2N	1	CONN_NO_N_S
 CONNECTOR_3	/	/	/	SIP3N	1	CONN_OUTPUT
 CONNECTOR_6	/	/	/	SIP6N	2	CONN_CHAIN CONN_CHAIN_NEXT
-CONNECTOR_7	/	/	Elec detec. only	SIP7N	1	CONN_AB_POWER
+CONNECTOR_7	unknown	unknown	unknown	SIP7N	2	CONN_ABCD_DATA CONN_ABCD_POWER
 CONNECTOR_8	/	/	/	SIP8N	2	CONN_POWER CONN_POWER_NEXT
 darlington, NPN	TIP120	/	Or equiv. BCE darlington Vce twice the lock voltage	TO92	1	Q3
 DIODE	1N4148	unknown	unknown	300mil	8	D10 D3 D4 D5 D6 D7 D8 D9
@@ -27,15 +29,16 @@ LED	C503B-GCN	/	green	5.08	4	LED2 LED4 LED6 LED8
 LED	C503B-RCN	/	red	5.08	2	LED11 LED12
 LED	C503B-WCN	/	white	5.08	1	LED13
 NPN_TRANSISTOR	2N3904	Or equiv. CBE	/	TO92	2	Q1 Q2
-POLARIZED_CAPACITOR	220uF	40%	aluminium 16V	2000mil	1	C214
-POLARIZED_CAPACITOR	22uF	20%	tantale 50V	5.08	1	C213
+POLARIZED_CAPACITOR	10uF	unknown	unknown	unknown	2	C25 C26
+POLARIZED_CAPACITOR	220uF	40%	aluminium 16V	2000mil	1	C24
+POLARIZED_CAPACITOR	22uF	20%	tantale 50V	5.08	1	C23
 POLARIZED_CAPACITOR	unknown	unknown	Neg supply only	unknown	4	C11 C12 C13 C14
-QUAD_OPAMP	unknown	unknown	unknown	SO14	2	U11 U12
 RESISTOR	1.15K	10%	/	500mil	1	R44
 RESISTOR	1.15K	10%, R211 to R217 diff 1%	/	500mil	12	R14 R15 R16 R17 R18 R19 R20 R21 R22 R23 R24 R25
 RESISTOR	10K	10%	/	500mil	2	R33 R34
 RESISTOR	10K	unknown	unknown	unknown	1	R41
 RESISTOR	1K	10%	value half the lock device resistance	500mil	1	R43
+RESISTOR	2.21K	unknown	Switches only	unknown	4	R76 R77 R78 R79
 RESISTOR	2.7K	10%	/	500mil	2	R26 R27
 RESISTOR	22.1	10%	/	500mil	5	R29 R37 R38 R40 R42
 RESISTOR	221K	unknown	unknown	500mil	8	R45 R48 R51 R54 R57 R60 R63 R66
@@ -43,7 +46,9 @@ RESISTOR	348K	10%	/	500mil	1	R32
 RESISTOR	4.75K	unknown	unknown	500mil	16	R46 R47 R49 R50 R52 R53 R55 R56 R58 R59 R61 R62 R64 R65 R67 R68
 RESISTOR	4.7K	10%	/	500mil	3	R30 R31 R39
 RESISTOR	47.5	10%	/	500mil	1	R28
+RESISTOR	681	unknown	unknown	unknown	1	R69
+RESISTOR	681	unknown	or zener diode	unknown	2	R70 R71
 RESISTOR	unknown	unknown	unknown	500mil	2	R35 R36
-RESISTOR	unknown	unknown	unknown	unknown	3	R69 R70 R71
 RESISTORPACK_9	unknown	unknown	unknown	unknown	1	RP45
+unknown	unknown	unknown	unknown	SO14	2	U11 U12
 .END

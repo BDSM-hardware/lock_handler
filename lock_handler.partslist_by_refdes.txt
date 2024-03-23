@@ -12,13 +12,22 @@ C18	CAPACITOR	2.2uF	20%	MLCC	2.54	1
 C19	CAPACITOR	2.2uF	20%	MLCC	2.54	1
 C2	CAPACITOR	4.7uF	20%	/	100mil	1
 C20	CAPACITOR	2.2uF	20%	MLCC	2.54	1
-C213	POLARIZED_CAPACITOR	22uF	20%	tantale 50V	5.08	1
-C214	POLARIZED_CAPACITOR	220uF	40%	aluminium 16V	2000mil	1
+C21	CAPACITOR	2.2uF	20%	MLCC	2.54	1
+C22	CAPACITOR	2.2uF	20%	MLCC	2.54	1
+C23	POLARIZED_CAPACITOR	22uF	20%	tantale 50V	5.08	1
+C24	POLARIZED_CAPACITOR	220uF	40%	aluminium 16V	2000mil	1
+C25	POLARIZED_CAPACITOR	10uF	unknown	unknown	unknown	1
+C26	POLARIZED_CAPACITOR	10uF	unknown	unknown	unknown	1
+C27	CAPACITOR	1uF	unknown	unknown	unknown	1
+C28	CAPACITOR	1uF	unknown	unknown	unknown	1
+C29	CAPACITOR	1uF	unknown	unknown	unknown	1
 C3	CAPACITOR	4.7uF	unknown	unknown	100mil	1
+C30	CAPACITOR	1uF	unknown	unknown	unknown	1
 C4	CAPACITOR	4.7uF	unknown	unknown	100mil	1
 C5	CAPACITOR	4.7uF	unknown	unknown	100mil	1
 C6	CAPACITOR	4.7uF	20%	/	100mil	1
-CONN_AB_POWER	CONNECTOR_7	/	/	Elec detec. only	SIP7N	1
+CONN_ABCD_DATA	CONNECTOR_7	unknown	unknown	unknown	SIP7N	1
+CONN_ABCD_POWER	CONNECTOR_7	unknown	unknown	unknown	SIP7N	1
 CONN_CHAIN	CONNECTOR_6	/	/	/	SIP6N	1
 CONN_CHAIN_NEXT	CONNECTOR_6	/	/	/	SIP6N	1
 CONN_DISABLE	CONNECTOR_2	/	/	/	SIP2N	1
@@ -108,17 +117,22 @@ R65	RESISTOR	4.75K	unknown	unknown	500mil	1
 R66	RESISTOR	221K	unknown	unknown	500mil	1
 R67	RESISTOR	4.75K	unknown	unknown	500mil	1
 R68	RESISTOR	4.75K	unknown	unknown	500mil	1
-R69	RESISTOR	unknown	unknown	unknown	unknown	1
-R70	RESISTOR	unknown	unknown	unknown	unknown	1
-R71	RESISTOR	unknown	unknown	unknown	unknown	1
+R69	RESISTOR	681	unknown	unknown	unknown	1
+R70	RESISTOR	681	unknown	or zener diode	unknown	1
+R71	RESISTOR	681	unknown	or zener diode	unknown	1
+R76	RESISTOR	2.21K	unknown	Switches only	unknown	1
+R77	RESISTOR	2.21K	unknown	Switches only	unknown	1
+R78	RESISTOR	2.21K	unknown	Switches only	unknown	1
+R79	RESISTOR	2.21K	unknown	Switches only	unknown	1
 RP45	RESISTORPACK_9	unknown	unknown	unknown	unknown	1
 U1	7400	unknown	unknown	unknown	DIP14	1
 U10	7404	74HC04	/	/	DIP14	1
-U11	QUAD_OPAMP	unknown	unknown	unknown	SO14	1
-U12	QUAD_OPAMP	unknown	unknown	unknown	SO14	1
+U11	unknown	unknown	unknown	unknown	SO14	1
+U12	unknown	unknown	unknown	unknown	SO14	1
 U13	icl7660	unknown	unknown	Neg supply only	DIL8	1
 U14	7806	7806	/	7805 or 7806	TO220	1
-U15	7906	unknown	unknown	Neg supply only	unknown	1
+U15	7906	unknown	unknown	Neg supply only	TO220	1
+U16	7809	unknown	unknown	unknown	TO220	1
 U2	7402	unknown	unknown	unknown	DIP14	1
 U3	7404	unknown	unknown	unknown	DIP14	1
 U4	7420	unknown	unknown	unknown	DIP14	1
