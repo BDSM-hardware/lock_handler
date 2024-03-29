@@ -1,0 +1,5 @@
+There was a major bug on the silk Gerber plane
+
+The diode D200 had a wrong footprint and was drawn in reverse direction
+
+The PCB file is fixed. The Gerber set of file has been re-exported.

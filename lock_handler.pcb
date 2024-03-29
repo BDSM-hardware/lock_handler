@@ -1,5 +1,5 @@
 # release: pcb 20091103
-# date:    Sun Dec 17 13:14:25 2023
+# date:    Thu Mar 28 19:45:04 2024
 # user:    bh (bh)
 # host:    noreply.github.com
 
@@ -2042,16 +2042,16 @@ Element["" "Transistor" "Q201" "TO220" 130000 511000 16500 -20000 0 100 ""]
 
 	)
 
-Element["" "Axial diode (pin 1 is cathode)" "D200" "ALF300" 62500 540500 -11000 -12500 1 100 ""]
+Element["" "Axial diode (pin 1 is cathode)" "D200" "ALF300" 62500 510500 -9900 11300 1 100 ""]
 (
-	Pin[0 0 5000 3000 5600 2000 "1" "1" "square"]
-	Pin[0 -30000 5000 3000 5600 2000 "2" "2" ""]
-	ElementLine [-5000 -10000 5000 -10000 1000]
-	ElementLine [5000 -20000 0 -10000 1000]
-	ElementLine [-5000 -20000 5000 -20000 1000]
-	ElementLine [0 -10000 -5000 -20000 1000]
-	ElementLine [0 -30000 0 -20000 1000]
-	ElementLine [0 -10000 0 0 1000]
+	Pin[0 30000 5200 3000 5800 2200 "1" "1" "square"]
+	Pin[0 0 5200 3000 5800 2200 "2" "2" ""]
+	ElementLine [-5000 10000 5000 10000 1000]
+	ElementLine [-5000 20000 0 10000 1000]
+	ElementLine [-5000 20000 5000 20000 1000]
+	ElementLine [0 10000 5000 20000 1000]
+	ElementLine [0 20000 0 30000 1000]
+	ElementLine [0 0 0 10000 1000]
 
 	)
 
