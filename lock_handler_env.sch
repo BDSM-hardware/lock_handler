@@ -355,7 +355,7 @@ tolerance=20%
 T 53000 43800 5 10 0 1 0 0 1
 comment=tantale 50V
 T 53000 43800 5 10 0 0 0 0 1
-footprint=5.08
+footprint=1000mil
 T 53000 43800 5 10 1 1 0 0 1
 value=22uF
 }
@@ -372,7 +372,7 @@ tolerance=40%
 T 54900 43800 5 10 0 1 0 0 1
 comment=aluminium 16V
 T 54900 43800 5 10 0 1 0 0 1
-footprint=2000mil
+footprint=800mil
 T 54900 43800 5 10 1 1 0 0 1
 value=220uF
 }
@@ -401,6 +401,8 @@ T 42100 45900 5 10 1 1 0 0 1
 comment=Neg supply only
 T 41900 46400 5 10 0 0 0 0 1
 footprint=TO220
+T 41900 46400 5 10 1 1 0 0 1
+value=7906
 }
 N 43500 48900 43500 48200 4
 N 41900 48200 43500 48200 4
@@ -585,6 +587,8 @@ T 45700 46100 5 10 1 1 0 0 1
 refdes=U16
 T 47100 45100 5 10 0 0 0 0 1
 footprint=TO220
+T 47100 45100 5 10 1 1 0 0 1
+comment=Neg supply and alim > 10V
 }
 C 46200 44800 1 0 0 gnd-1.sym
 N 45200 45700 45500 45700 4
@@ -602,3 +606,22 @@ value=NoConnection
 T 41000 50500 5 10 0 0 0 0 1
 device=DRC_Directive
 }
+C 47500 44400 1 270 0 capacitor-1.sym
+{
+T 48200 44200 5 10 0 0 270 0 1
+device=CAPACITOR
+T 48400 44200 5 10 0 0 270 0 1
+symversion=0.1
+T 47500 44400 5 10 0 1 0 0 1
+tolerance=20%
+T 47500 44400 5 10 0 1 0 0 1
+footprint=2.54
+T 47600 43400 5 10 1 1 90 0 1
+refdes=C31
+T 47600 44100 5 10 1 1 90 0 1
+value=2.2uF
+T 47500 43000 5 10 1 1 0 0 1
+comment=MLCC
+}
+C 47600 43200 1 0 0 gnd-1.sym
+C 47500 44400 1 0 0 vcc-1.sym

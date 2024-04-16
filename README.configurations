@@ -1,0 +1,40 @@
+The PCB has been designed for multiple configurations.
+The components needed by all the configurations are included in the PCB. Regardless the method, the input is one wire per channel and a ground. There are pins 5 to 7 on the same conn_abcd_data connector and more pins ( 4, 5 and 6 ) on the conn_abcd_power. It make the wiring easy with one pair to 2 pairs per channel. The input is a three states voltage: 0 if the soft is not OK, Vcc/2 if only the soft is OK and Vcc if both are OK. 
+Some configurations need a negative power supply. The converter is included in the PCB as well. If it not needed some components are omitted or shunted ( see below).
+
+* Simple switches.
+It is the simple configuration for mechanical locks. The parts containing thee hole should be pushed at the maximum to insure the pin goes into. After the lock, the parts should be able to move a little bit while keeping the soft OK.
+It does not need a negative power supply nor additional board.
+The resistors R76 to R79 are in use.
+The switches are NC type. The pair is shunted if the soft is not OK. The pair is shunted via a 2.21K resistor if not OK.
+
+* Switch and temperature sensor.
+This is a nice solution for magnetic restrains that close by themselves (they weight or other). The user has to open and close one by one. The restrains is connected to the soft. The user confirms its ankles and wrists are inside by maintaining a contact to the temperature sensor, a optical detector or other. When it become OK, the sensor "releases" the hard.  
+It should not need a negative power supply, but a small PCB is needed or a "wrapping" mount.
+The resistors R76 to R79 are in use. The soft is done via a shunt as well. The hard is done, using its electronics followed by a transistor to shunt via a 2.21K resistor.
+
+
+* Metal detector.
+It probably need a negative power supply.
+The resistors R76 to R79 are omitted as the input is, in general, connected to an operational amplifier.
+TODO
+
+
+
+Assembly with or without negative power supply.
+
+* Without
+The jumper Conn_no_n_s is shunted.
+The diodes D3 to D10 are replaced by straps.
+The diode D12 is omitted.
+The resistors network RP45 is omitted.
+The capacitors C11, C13, C14 and C22 are omitted
+The capacitor C12 is shunted.
+The IC  U13, U15, U16 are omitted.
+
+* With negative power supply and main supply voltage < 10V
+The IC U16 is omitted, its pins 1 and 3 are shunted.
+
+* With negative power supply and main supply voltage >= 10V
+Everything is wired.
+

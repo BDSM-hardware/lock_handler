@@ -14,19 +14,20 @@ C2	CAPACITOR	4.7uF	20%	/	100mil	1
 C20	CAPACITOR	2.2uF	20%	MLCC	2.54	1
 C21	CAPACITOR	2.2uF	20%	MLCC	2.54	1
 C22	CAPACITOR	2.2uF	20%	MLCC	2.54	1
-C23	POLARIZED_CAPACITOR	22uF	20%	tantale 50V	5.08	1
-C24	POLARIZED_CAPACITOR	220uF	40%	aluminium 16V	2000mil	1
-C25	POLARIZED_CAPACITOR	10uF	unknown	unknown	unknown	1
-C26	POLARIZED_CAPACITOR	10uF	unknown	unknown	unknown	1
-C27	CAPACITOR	1uF	unknown	unknown	unknown	1
-C28	CAPACITOR	1uF	unknown	unknown	unknown	1
-C29	CAPACITOR	1uF	unknown	unknown	unknown	1
+C23	POLARIZED_CAPACITOR	22uF	20%	tantale 50V	1000mil	1
+C24	POLARIZED_CAPACITOR	220uF	40%	aluminium 16V	800mil	1
+C25	POLARIZED_CAPACITOR	10uF	20%	or more	200mil	1
+C26	POLARIZED_CAPACITOR	10uF	20%	or more	200mil	1
+C27	CAPACITOR	1uF	20%	or more	100mil	1
+C28	CAPACITOR	1uF	20%	or more	100mil	1
+C29	CAPACITOR	1uF	20%	or more	100mil	1
 C3	CAPACITOR	4.7uF	unknown	unknown	100mil	1
-C30	CAPACITOR	1uF	unknown	unknown	unknown	1
+C30	CAPACITOR	1uF	20%	or more	100mil	1
+C31	CAPACITOR	2.2uF	20%	MLCC	2.54	1
 C4	CAPACITOR	4.7uF	unknown	unknown	100mil	1
 C5	CAPACITOR	4.7uF	unknown	unknown	100mil	1
 C6	CAPACITOR	4.7uF	20%	/	100mil	1
-CONN_ABCD_DATA	CONNECTOR_7	unknown	unknown	unknown	SIP7N	1
+CONN_ABCD_DATA	CONNECTOR_7	unknown	/	unknown	SIP7N	1
 CONN_ABCD_POWER	CONNECTOR_7	unknown	unknown	unknown	SIP7N	1
 CONN_CHAIN	CONNECTOR_6	/	/	/	SIP6N	1
 CONN_CHAIN_NEXT	CONNECTOR_6	/	/	/	SIP6N	1
@@ -35,17 +36,17 @@ CONN_NO_N_S	CONNECTOR_2	unknown	unknown	Neg supply to ground	SIP2N	1
 CONN_OUTPUT	CONNECTOR_3	/	/	/	SIP3N	1
 CONN_POWER	CONNECTOR_8	/	/	/	SIP8N	1
 CONN_POWER_NEXT	CONNECTOR_8	/	/	/	SIP8N	1
-D10	DIODE	1N4148	unknown	unknown	300mil	1
+D10	DIODE	1N4148	/	Neg supply only	300mil	1
 D11	DIODE	BA158	/	/	400mil	1
 D12	DIODE	BA158	/	Neg supply only	400mil	1
 D13	DIODE	BA158	/	/	400mil	1
-D3	DIODE	1N4148	unknown	unknown	300mil	1
-D4	DIODE	1N4148	unknown	unknown	300mil	1
-D5	DIODE	1N4148	unknown	unknown	300mil	1
-D6	DIODE	1N4148	unknown	unknown	300mil	1
-D7	DIODE	1N4148	unknown	unknown	300mil	1
-D8	DIODE	1N4148	unknown	unknown	300mil	1
-D9	DIODE	1N4148	unknown	unknown	300mil	1
+D3	DIODE	1N4148	/	Neg supply only	300mil	1
+D4	DIODE	1N4148	/	Neg supply only	300mil	1
+D5	DIODE	1N4148	/	Neg supply only	300mil	1
+D6	DIODE	1N4148	/	Neg supply only	300mil	1
+D7	DIODE	1N4148	/	Neg supply only	300mil	1
+D8	DIODE	1N4148	/	Neg supply only	300mil	1
+D9	DIODE	1N4148	/	Neg supply only	300mil	1
 LED1	LED	C503B-BCN	/	bleue	5.08	1
 LED10	LED	C503B-ACN	/	amber	5.08	1
 LED11	LED	C503B-RCN	/	red	5.08	1
@@ -93,46 +94,46 @@ R41	RESISTOR	10K	unknown	unknown	unknown	1
 R42	RESISTOR	22.1	10%	/	500mil	1
 R43	RESISTOR	1K	10%	value half the lock device resistance	500mil	1
 R44	RESISTOR	1.15K	10%	/	500mil	1
-R45	RESISTOR	221K	unknown	unknown	500mil	1
-R46	RESISTOR	4.75K	unknown	unknown	500mil	1
-R47	RESISTOR	4.75K	unknown	unknown	500mil	1
-R48	RESISTOR	221K	unknown	unknown	500mil	1
-R49	RESISTOR	4.75K	unknown	unknown	500mil	1
-R50	RESISTOR	4.75K	unknown	unknown	500mil	1
-R51	RESISTOR	221K	unknown	unknown	500mil	1
-R52	RESISTOR	4.75K	unknown	unknown	500mil	1
-R53	RESISTOR	4.75K	unknown	unknown	500mil	1
-R54	RESISTOR	221K	unknown	unknown	500mil	1
-R55	RESISTOR	4.75K	unknown	unknown	500mil	1
-R56	RESISTOR	4.75K	unknown	unknown	500mil	1
-R57	RESISTOR	221K	unknown	unknown	500mil	1
-R58	RESISTOR	4.75K	unknown	unknown	500mil	1
-R59	RESISTOR	4.75K	unknown	unknown	500mil	1
-R60	RESISTOR	221K	unknown	unknown	500mil	1
-R61	RESISTOR	4.75K	unknown	unknown	500mil	1
-R62	RESISTOR	4.75K	unknown	unknown	500mil	1
-R63	RESISTOR	221K	unknown	unknown	500mil	1
-R64	RESISTOR	4.75K	unknown	unknown	500mil	1
-R65	RESISTOR	4.75K	unknown	unknown	500mil	1
-R66	RESISTOR	221K	unknown	unknown	500mil	1
-R67	RESISTOR	4.75K	unknown	unknown	500mil	1
-R68	RESISTOR	4.75K	unknown	unknown	500mil	1
-R69	RESISTOR	681	unknown	unknown	unknown	1
-R70	RESISTOR	681	unknown	or zener diode	unknown	1
-R71	RESISTOR	681	unknown	or zener diode	unknown	1
-R76	RESISTOR	2.21K	unknown	Switches only	unknown	1
-R77	RESISTOR	2.21K	unknown	Switches only	unknown	1
-R78	RESISTOR	2.21K	unknown	Switches only	unknown	1
-R79	RESISTOR	2.21K	unknown	Switches only	unknown	1
-RP45	RESISTORPACK_9	unknown	unknown	unknown	unknown	1
+R45	RESISTOR	221K	10%	unknown	500mil	1
+R46	RESISTOR	4.75K	10%	unknown	500mil	1
+R47	RESISTOR	4.75K	10%	unknown	500mil	1
+R48	RESISTOR	221K	10%	/	500mil	1
+R49	RESISTOR	4.75K	10%	/	500mil	1
+R50	RESISTOR	4.75K	10%	/	500mil	1
+R51	RESISTOR	221K	10%	/	500mil	1
+R52	RESISTOR	4.75K	10%	/	500mil	1
+R53	RESISTOR	4.75K	10%	/	500mil	1
+R54	RESISTOR	221K	10%	/	500mil	1
+R55	RESISTOR	4.75K	10%	/	500mil	1
+R56	RESISTOR	4.75K	10%	/	500mil	1
+R57	RESISTOR	221K	10%	/	500mil	1
+R58	RESISTOR	4.75K	10%	/	500mil	1
+R59	RESISTOR	4.75K	10%	/	500mil	1
+R60	RESISTOR	221K	10%	/	500mil	1
+R61	RESISTOR	4.75K	10%	/	500mil	1
+R62	RESISTOR	4.75K	10%	/	500mil	1
+R63	RESISTOR	221K	10%	/	500mil	1
+R64	RESISTOR	4.75K	10%	/	500mil	1
+R65	RESISTOR	4.75K	10%	/	500mil	1
+R66	RESISTOR	221K	10%	/	500mil	1
+R67	RESISTOR	4.75K	10%	/	500mil	1
+R68	RESISTOR	4.75K	10%	/	500mil	1
+R69	RESISTOR	681	2%	/	500mil	1
+R70	RESISTOR	681	2%	or zener diode	500mil	1
+R71	RESISTOR	681	2%	or zener diode	500mil	1
+R76	RESISTOR	2.21K	2%	Switches only	500mil	1
+R77	RESISTOR	2.21K	2%	Switches only	500mil	1
+R78	RESISTOR	2.21K	2%	Switches only	500mil	1
+R79	RESISTOR	2.21K	2%	Switches only	500mil	1
+RP45	RESISTORPACK_9	10K	10%	Neg supply only	8X100mil	1
 U1	7400	unknown	unknown	unknown	DIP14	1
 U10	7404	74HC04	/	/	DIP14	1
-U11	unknown	unknown	unknown	unknown	SO14	1
-U12	unknown	unknown	unknown	unknown	SO14	1
+U11	unknown	TL064	/	/	DIL14	1
+U12	unknown	TL064	/	/	DIL14	1
 U13	icl7660	unknown	unknown	Neg supply only	DIL8	1
 U14	7806	7806	/	7805 or 7806	TO220	1
-U15	7906	unknown	unknown	Neg supply only	TO220	1
-U16	7809	unknown	unknown	unknown	TO220	1
+U15	7906	7906	unknown	Neg supply only	TO220	1
+U16	7809	unknown	unknown	Neg supply and alim > 10V	TO220	1
 U2	7402	unknown	unknown	unknown	DIP14	1
 U3	7404	unknown	unknown	unknown	DIP14	1
 U4	7420	unknown	unknown	unknown	DIP14	1
