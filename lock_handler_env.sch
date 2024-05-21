@@ -390,6 +390,8 @@ T 41500 48600 5 10 0 0 0 0 1
 footprint=DIL8
 T 41800 48400 5 10 1 1 0 0 1
 comment=Neg supply only
+T 41500 48600 5 10 0 0 0 0 1
+tolerance=/
 }
 C 41900 46400 1 0 0 lm7906-1.sym
 {
@@ -419,6 +421,10 @@ T 44700 49300 5 10 0 0 270 0 1
 symversion=0.1
 T 45100 48600 5 10 1 1 90 0 1
 comment=Neg supply only
+T 43800 49500 5 10 0 0 0 0 1
+tolerance=20%
+T 43900 49200 5 10 1 1 90 0 1
+value=4.7uF
 }
 N 43500 49500 44000 49500 4
 N 41200 48900 41500 48900 4
@@ -429,12 +435,16 @@ C 44300 49800 1 270 0 capacitor-2.sym
 {
 T 45000 49600 5 10 0 0 270 0 1
 device=POLARIZED_CAPACITOR
-T 44300 48500 5 10 1 1 90 0 1
+T 44400 48500 5 10 1 1 90 0 1
 refdes=C14
 T 45200 49600 5 10 0 0 270 0 1
 symversion=0.1
 T 44900 48600 5 10 1 1 90 0 1
 comment=Neg supply only
+T 44300 49800 5 10 0 0 0 0 1
+tolerance=20%
+T 44400 49500 5 10 1 1 90 0 1
+value=4.7uF
 }
 C 44900 47900 1 180 0 vee-1.sym
 N 43500 47000 43500 47900 4
@@ -484,6 +494,10 @@ T 42800 46300 5 10 0 0 90 0 1
 symversion=0.1
 T 43800 45900 5 10 1 1 90 0 1
 comment=Neg supply only
+T 43700 46100 5 10 0 0 0 0 1
+tolerance=20%
+T 43300 46500 5 10 1 1 90 0 1
+value=4.7uF
 }
 C 42100 46100 1 90 0 capacitor-2.sym
 {
@@ -495,6 +509,10 @@ T 41200 46300 5 10 0 0 90 0 1
 symversion=0.1
 T 41500 45900 5 10 1 1 90 0 1
 comment=Neg supply only
+T 42100 46100 5 10 0 0 0 0 1
+tolerance=20%
+T 41700 46600 5 10 1 1 90 0 1
+value=4.7uF
 }
 C 46900 44400 1 270 0 capacitor-1.sym
 {
@@ -538,16 +556,20 @@ C 47300 43500 1 180 0 vee-1.sym
 C 45800 48700 1 0 0 quad_opamp_power.sym
 {
 T 46425 49650 5 8 0 0 0 0 1
-device=LM741
+device=QUAD_OPAMP
 T 46000 49600 5 10 1 1 0 0 1
 refdes=U11
+T 45800 48700 5 10 0 1 0 0 1
+footprint=DIL14
 }
 C 45800 47100 1 0 0 quad_opamp_power.sym
 {
 T 46425 48050 5 8 0 0 0 0 1
-device=LM741
+device=QUAD_OPAMP
 T 46000 48000 5 10 1 1 0 0 1
 refdes=U12
+T 45800 47100 5 10 0 1 0 0 1
+footprint=DIL14
 }
 N 46300 49500 46300 49800 4
 N 46300 47900 46300 48200 4

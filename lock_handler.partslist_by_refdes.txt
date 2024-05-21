@@ -1,10 +1,10 @@
 .START
 ..refdes	device	value	tolerance	comment	footprint	quantity
 C1	CAPACITOR	4.7uF	20%	/	100mil	1
-C11	POLARIZED_CAPACITOR	unknown	unknown	Neg supply only	unknown	1
-C12	POLARIZED_CAPACITOR	unknown	unknown	Neg supply only	unknown	1
-C13	POLARIZED_CAPACITOR	unknown	unknown	Neg supply only	unknown	1
-C14	POLARIZED_CAPACITOR	unknown	unknown	Neg supply only	unknown	1
+C11	POLARIZED_CAPACITOR	4.7uF	20%	Neg supply only	unknown	1
+C12	POLARIZED_CAPACITOR	4.7uF	20%	Neg supply only	unknown	1
+C13	POLARIZED_CAPACITOR	4.7uF	20%	Neg supply only	unknown	1
+C14	POLARIZED_CAPACITOR	4.7uF	20%	Neg supply only	unknown	1
 C15	CAPACITOR	2.2uF	20%	MLCC	2.54	1
 C16	CAPACITOR	2.2uF	20%	MLCC	2.54	1
 C17	CAPACITOR	2.2uF	20%	MLCC	2.54	1
@@ -27,7 +27,7 @@ C31	CAPACITOR	2.2uF	20%	MLCC	2.54	1
 C4	CAPACITOR	4.7uF	unknown	unknown	100mil	1
 C5	CAPACITOR	4.7uF	unknown	unknown	100mil	1
 C6	CAPACITOR	4.7uF	20%	/	100mil	1
-CONN_ABCD_DATA	CONNECTOR_7	unknown	/	unknown	SIP7N	1
+CONN_ABCD_DATA	CONNECTOR_7	/	/	/	SIP7N	1
 CONN_ABCD_POWER	CONNECTOR_7	unknown	unknown	unknown	SIP7N	1
 CONN_CHAIN	CONNECTOR_6	/	/	/	SIP6N	1
 CONN_CHAIN_NEXT	CONNECTOR_6	/	/	/	SIP6N	1
@@ -84,19 +84,19 @@ R31	RESISTOR	4.7K	10%	/	500mil	1
 R32	RESISTOR	348K	10%	/	500mil	1
 R33	RESISTOR	10K	10%	/	500mil	1
 R34	RESISTOR	10K	10%	/	500mil	1
-R35	RESISTOR	unknown	unknown	unknown	500mil	1
-R36	RESISTOR	unknown	unknown	unknown	500mil	1
+R35	RESISTOR	10K	10%	/	500mil	1
+R36	RESISTOR	10K	10%	/	500mil	1
 R37	RESISTOR	22.1	10%	/	500mil	1
 R38	RESISTOR	22.1	10%	/	500mil	1
 R39	RESISTOR	4.7K	10%	/	500mil	1
 R40	RESISTOR	22.1	10%	/	500mil	1
-R41	RESISTOR	10K	unknown	unknown	unknown	1
+R41	RESISTOR	10K	10%	/	500mil	1
 R42	RESISTOR	22.1	10%	/	500mil	1
 R43	RESISTOR	1K	10%	value half the lock device resistance	500mil	1
 R44	RESISTOR	1.15K	10%	/	500mil	1
-R45	RESISTOR	221K	10%	unknown	500mil	1
-R46	RESISTOR	4.75K	10%	unknown	500mil	1
-R47	RESISTOR	4.75K	10%	unknown	500mil	1
+R45	RESISTOR	221K	10%	/	500mil	1
+R46	RESISTOR	4.75K	10%	/	500mil	1
+R47	RESISTOR	4.75K	10%	/	500mil	1
 R48	RESISTOR	221K	10%	/	500mil	1
 R49	RESISTOR	4.75K	10%	/	500mil	1
 R50	RESISTOR	4.75K	10%	/	500mil	1
@@ -126,19 +126,19 @@ R77	RESISTOR	2.21K	2%	Switches only	500mil	1
 R78	RESISTOR	2.21K	2%	Switches only	500mil	1
 R79	RESISTOR	2.21K	2%	Switches only	500mil	1
 RP45	RESISTORPACK_9	10K	10%	Neg supply only	8X100mil	1
-U1	7400	unknown	unknown	unknown	DIP14	1
+U1	7400	74HC00	/	/	DIP14	1
 U10	7404	74HC04	/	/	DIP14	1
-U11	unknown	TL064	/	/	DIL14	1
-U12	unknown	TL064	/	/	DIL14	1
-U13	icl7660	unknown	unknown	Neg supply only	DIL8	1
+U11	QUAD_OPAMP	TL064	/	/	DIL14	1
+U12	QUAD_OPAMP	TL064	/	/	DIL14	1
+U13	icl7660	unknown	/	Neg supply only	DIL8	1
 U14	7806	7806	/	7805 or 7806	TO220	1
 U15	7906	7906	unknown	Neg supply only	TO220	1
 U16	7809	unknown	unknown	Neg supply and alim > 10V	TO220	1
-U2	7402	unknown	unknown	unknown	DIP14	1
-U3	7404	unknown	unknown	unknown	DIP14	1
-U4	7420	unknown	unknown	unknown	DIP14	1
-U5	7400	unknown	unknown	unknown	DIP14	1
-U7	7400	unknown	unknown	unknown	DIP14	1
-U8	7400	unknown	unknown	unknown	DIP14	1
+U2	7402	74HC02	/	/	DIP14	1
+U3	7404	74HC04	/	/	DIP14	1
+U4	7420	74HC20	/	/	DIP14	1
+U5	7400	74HC00	/	/	DIP14	1
+U7	7400	74HC00	/	/	DIP14	1
+U8	7400	74HC00	/	/	DIP14	1
 U9	74132	74HC132	/	/	DIP14	1
 .END
