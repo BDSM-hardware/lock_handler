@@ -1,0 +1,16 @@
+In case of an operator or additional sensors, a slightly different PCB has to be drawn.
+A fire detector, an intrusion detector, a timer etc... may be required.
+
+However, the price of PCB is close to a constant for very low series.
+
+This document explain how to slightly modify the PCB
+
+The operator PCB does not require the disable function. The tip and trick is to reuse its electronics.
+The disabled led is becoming the ring led.
+* void R30
+* replace R39 by a resistor of the same value than R32
+* connect R39 pin 1 with R32 pin 1
+* strap pin 14 with pin 1 of U5
+* strap pin 1 of CONN_CHAIN with pin 1 of CONN_DISABLE
+* strap pin 3 of U3 with pin 8 of U10, while keeping the pins out of the PCB
+* change R40 from 22.1R to 10K

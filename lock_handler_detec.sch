@@ -803,7 +803,7 @@ device=RESISTOR
 T 44600 47800 5 10 1 1 90 0 1
 refdes=R69
 T 44600 48300 5 10 1 1 90 0 1
-value=681
+value=681R
 T 44900 47600 5 10 0 1 0 0 1
 footprint=500mil
 T 44900 47600 5 10 0 1 0 0 1
@@ -818,7 +818,7 @@ device=RESISTOR
 T 44600 46300 5 10 1 1 90 0 1
 refdes=R70
 T 44600 46800 5 10 1 1 90 0 1
-value=681
+value=681R
 T 44400 46000 5 10 1 1 90 0 1
 comment=or zener diode
 T 44900 46100 5 10 0 1 0 0 1
@@ -833,7 +833,7 @@ device=RESISTOR
 T 44600 44800 5 10 1 1 90 0 1
 refdes=R71
 T 44600 45300 5 10 1 1 90 0 1
-value=681
+value=681R
 T 44400 44400 5 10 1 1 90 0 1
 comment=or zener diode
 T 44900 44600 5 10 0 1 0 0 1
