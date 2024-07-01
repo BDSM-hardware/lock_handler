@@ -9,7 +9,7 @@ If all the detections of all the modules are on, the LEDs switch off and an ambe
 When it is locked the amber switches off and a set of 2 red LED illuminates.
 If a module is unused a switch turns everything off, tells to the daisy-chain it is OK, discards the lock command and illuminates a blue LED.
 
-It is designed as small modules of 2 detection inputs. There is a daisy-chain in between.
+It is designed as small modules of 4 detection inputs. There is a daisy-chain in between.
 * Mode 1: The system waits everybody is ready to lock, and illuminate an all ready LED. By connecting two wires to each other, it locks. By opening or shorting to the ground, it unlocks.
 * Mode 2: It is similar to mode 1 but it locks as soon as everybody is ready without external action (remote control, timer etc...). This spares some wires.
 
