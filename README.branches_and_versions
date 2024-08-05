@@ -1,6 +1,5 @@
-The master branch contains the RC of the 2 detections inputs.
-The lock_handler_4 branch contains the EARLY design of the 4 detections inputs.
-Please note, in that branch, many files are outdated.
+The master branch contains the 2 detections inputs.It is no longuer maintained.
+The lock_handler_4 branch contains the RC version of the 4 detections inputs.
 
 The 2 inputs has been tricky because the logic 74HC circuits contains 3, 4 or 6 logical gates. One can use a NOR for a NAND, but it consumes 3/4 of the circuit. Then some optimisations make the design more difficult to understand.
 The 4 input version is more easy to design as relevant circuits can be used, each 1/4 for each channel. That makes the design more easy to understand.
