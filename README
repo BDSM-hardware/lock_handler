@@ -30,6 +30,5 @@ Some VHDL files are provided to describe the behaviour in a more human-readable 
 A test is provided to check the truth table is the same for both the behaviour file and the file exported from the schematic.
 
 TODO
-* More verification
 * Add instructions using the bottom silk
 * Build a prototype

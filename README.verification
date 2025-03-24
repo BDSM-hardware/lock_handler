@@ -1,0 +1,15 @@
+As of this version, there is some formal verification.
+
+Up to now, a verification schema has been design using VHDL test software.
+It compares the net-list with a behavior VHDL software.
+
+The verification is mostly designed for the net-list because this one generates the PCB data.
+However, it can verify the behavior as well.
+
+
+The MAJOR advantage is it works with a post synthesis circuit.
+
+
+TODO
+* complete the rule 3
+* write more rules
