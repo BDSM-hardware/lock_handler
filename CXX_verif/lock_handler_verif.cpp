@@ -97,21 +97,27 @@ int main()
 	unsigned long ind_out, ind_test, ind_others_run, ind_others_last; // ind_debug;
 	unsigned long OK_count_ring=0, NOK_count_ring=0;
 	unsigned long OK_count_others=0, NOK_count_others=0;
-	for( ind_in = 0; ind_in < (8*4*4*4*4); ind_in++)
+
+	// 8 cases locked, disabled and ready
+	// 4 channels with 4 hard and soft cases 
+	const unsigned long N_cases = 2*2*2*4*4*4*4;
+
+	for( ind_in = 0; ind_in < N_cases; ind_in++)
 	  {
+		SetInputs(ind_in,
+				  ref(top.p_A__soft), ref(top.p_A__hard),
+				  ref(top.p_B__soft), ref(top.p_B__hard),
+				  ref(top.p_C__soft), ref(top.p_C__hard),
+				  ref(top.p_D__soft), ref(top.p_D__hard),
+				  ref(top.p_LP__in__locked),
+				  ref(top.p_LP__in__disabled),
+				  ref(top.p_LP__in__ready)
+				  );
 		for( ind_test = 0; ind_test < 2; ind_test++ )
 		  {
 			SetInputs(ind_test, ref(top.p_E__ring));
-			SetInputs(ind_in,
-					  ref(top.p_A__soft),ref(top.p_A__hard),
-					  ref(top.p_B__soft),ref(top.p_B__hard),
-					  ref(top.p_C__soft),ref(top.p_C__hard),
-					  ref(top.p_D__soft),ref(top.p_D__hard),
-					  ref(top.p_LP__in__locked),
-					  ref(top.p_LP__in__disabled),
-					  ref(top.p_LP__in__ready)
-					  );
 			top.step();
+
 			GetOutputs( ind_out, top.p_N__E__ring );
 			//			cout << ind_in << "  " << ind_debug << "  " << ind_test << "   " << ind_out << "        ";  
 
@@ -127,10 +133,10 @@ int main()
 						top.p_N__disabled,
 						top.p_N__all__ready,
 						top.p_N__locked,
-						top.p_N__A__ready,top.p_N__A__not__ready,
-						top.p_N__B__ready,top.p_N__B__not__ready,
-						top.p_N__C__ready,top.p_N__C__not__ready,
-						top.p_N__D__ready,top.p_N__D__not__ready);
+						top.p_N__A__ready, top.p_N__A__not__ready,
+						top.p_N__B__ready, top.p_N__B__not__ready,
+						top.p_N__C__ready, top.p_N__C__not__ready,
+						top.p_N__D__ready, top.p_N__D__not__ready);
 
 			if ( ind_test == 1 )
 			  {
@@ -141,12 +147,14 @@ int main()
 			  }
 		  }
 	  }
-	if ( NOK_count_ring > 0 || NOK_count_others > 0 )
+	if ( NOK_count_ring > 0 ||
+		 NOK_count_others > 0 ||
+		 ( OK_count_ring + NOK_count_ring ) != 2*N_cases ||
+		 ( OK_count_others + NOK_count_others ) != N_cases )
 	  global_return = 1;
 
-	cout << "Ring: " << OK_count_ring << " good, " << NOK_count_ring << " BAD. ";
-	cout << "Others: " << OK_count_others << " good, " << NOK_count_others << " BAD. ";
-	cout << endl;
+	cout << "Ring: " << OK_count_ring << " good, " << NOK_count_ring << " BAD / " << 2*N_cases << "." << endl;
+	cout << "Others: " << OK_count_others << " good, " << NOK_count_others << " BAD / " << N_cases << "." << endl;
   }
 
   /// The rule 2 checks the disable light on the disable led and shutdown everything else
@@ -165,13 +173,16 @@ int main()
 	unsigned long OK_count_disabled=0, NOK_count_disabled=0;
 	unsigned long OK_count_others=0, NOK_count_others=0;
 
-	for( ind_in = 0; ind_in < (4*4*4*4*4); ind_in++)
+	// 4 cases locked and ready
+	// 4 channels with 4 hard and soft cases 
+	const unsigned long N_cases = 4*4*4*4*4;
+
+	// We don't care the ring
+
+	// the input of disabled is active low
+	SetInputs(0, ref(top.p_LP__in__disabled));
+	for( ind_in = 0; ind_in < (2*2*4*4*4*4); ind_in++)
 	  {
-	 	// We don't care the ring
-
-		// the input of disabled is active low
-		SetInputs(0, ref(top.p_LP__in__disabled));
-
 		SetInputs(ind_in,
 				  ref(top.p_A__soft),ref(top.p_A__hard),
 				  ref(top.p_B__soft),ref(top.p_B__hard),
@@ -202,12 +213,16 @@ int main()
 		else
 		  NOK_count_disabled += 1;
 	  }
-	if ( NOK_count_disabled > 0 || NOK_count_others > 0 )
+	if ( NOK_count_disabled > 0 ||
+		 NOK_count_others > 0  ||
+		 ( OK_count_disabled + NOK_count_disabled ) != N_cases ||
+		 ( OK_count_others + NOK_count_others ) != N_cases )
 	  global_return = 1;
 
-	cout << "Disabled: " << OK_count_disabled << " good, " << NOK_count_disabled << " BAD. ";
-	cout << "Others: " << OK_count_others << " good, " << NOK_count_others << " BAD. ";
-	cout << endl;
+	cout << "Disabled: " << OK_count_disabled << " good, " << NOK_count_disabled << " BAD / ";
+	cout << N_cases << "." << endl;
+	cout << "Others: " << OK_count_others << " good, " << NOK_count_others << " BAD / ";
+	cout << N_cases << "." << endl;
   }
 
   /// The rule 3 checks the lock light on the lock led and some other behavior
@@ -225,18 +240,23 @@ int main()
 	unsigned long OK_count_should_0=0, NOK_count_should_0=0;
 	unsigned long OK_count_should_1=0, NOK_count_should_1=0;
 
+	// 4 channels with 2 hard or 2 soft cases
+	const unsigned long N_cases = 2*2*2*2;
+
+	// We don't care the ring
+
 	/// Set the already tested
 	SetInputs(1, ref(top.p_LP__in__disabled));
 
+	// the input of locked is active high and the ready is high when locked is high
+	SetInputs(3,
+			  ref(top.p_LP__in__locked),
+			  ref(top.p_LP__in__ready));
+	
 	/// Step 1 Check it remains locked with all the softs on
-	for( ind_in = 0; ind_in < 16 ; ind_in++ )
+	for( ind_in = 0; ind_in < N_cases ; ind_in++ )
 	  {
 	 	// We don't care the ring
-
-		// the input of locked is active high and the ready is high when locked is high
-		SetInputs(3,
-				  ref(top.p_LP__in__locked),
-				  ref(top.p_LP__in__ready));
 
 		SetInputs(0x0f,
 				  ref(top.p_A__soft),
@@ -276,11 +296,91 @@ int main()
 
 
 	cout << "Step 1 all the detections soft are on: ";
-	cout << "Locked led on: " << OK_count_should_1 << " good, " << NOK_count_should_1 << " BAD. " << endl;
+	cout << "Locked led on: " << OK_count_should_1 << " good, ";
+	cout << NOK_count_should_1 << " BAD / " << N_cases << "." << endl;
 	
 	cout << "All led ready, not ready and the out pull-down off: " << OK_count_should_0 << " good, ";
-	cout << NOK_count_should_0 << " BAD. " << endl;
+	cout << NOK_count_should_0 << " BAD / " << N_cases << "." << endl;
+
+	/// Step 2 Check there is a pull down request if one or more of the softs are off
+	unsigned long ind_hard;
+	OK_count_should_1=0, NOK_count_should_1=0;
+	
+	// We don't care the ring
+	// Disable, locked and ready are alerady set to 1 above.
+
+	// The loop excludes the all one (0x0f) because it dooes not belong to this case
+	for( ind_in = 0; ind_in < ( N_cases - 1 ) ; ind_in++ )
+		for ( ind_hard = 0 ; ind_hard < N_cases ; ind_hard++ )
+		  {
+			SetInputs(ind_in,
+					  ref(top.p_A__soft),
+					  ref(top.p_B__soft),
+					  ref(top.p_C__soft),
+					  ref(top.p_D__soft)
+					  );
+			SetInputs(ind_hard,
+					  ref(top.p_A__hard),
+					  ref(top.p_B__hard),
+					  ref(top.p_C__hard),
+					  ref(top.p_D__hard)
+					  );
+			top.step();
+		
+			GetOutputs( ind_out_should_1,
+						top.p_LP__out__pulldown__not__ready);
+			// We don't test [ABCD]__ready nor locked
+			//   as the locked is going to off.
+			// Indeed, the pull-down is going to reset the ready
+			//   which is going to reset the locked.
+			// Since the [ABCD] are led, we don't care about the transition.
+
+			// For the same reason, we don't care what the transition of locked output
+			//   as it is, in general, a relay 
+
+		if ( ind_out_should_1 == 1 )
+		  OK_count_should_1 += 1;
+		else
+		  NOK_count_should_1 += 1;
+	  }
+	if ( NOK_count_should_0 > 0 )
+	  global_return = 1;
+
+	cout << "Step 2 one or more of the detections soft are off: ";
+	cout << "Pull down on: " << OK_count_should_1 << " good, " << NOK_count_should_1 << " BAD / ";
+	cout << N_cases * ( N_cases - 1 ) << "." << endl;
 	
   }
+  {
+	cout << endl << "Rule 4, check the all ready on, light on the locked led and handle the pull-down" << endl;
+
+	/// Loop on the cases, see bellow
+	unsigned long ind_in;
+	unsigned long ind_out_should_1, ind_out_should_0;
+	unsigned long OK_count_should_0=0, NOK_count_should_0=0;
+	unsigned long OK_count_should_1=0, NOK_count_should_1=0;
+
+	// 4 channels with 2 hard or 2 soft cases
+	const unsigned long N_cases = 2*2*2*2;
+
+	// We don't care the ring
+
+	// Set the already tested signals
+	SetInputs(1,
+			  ref(top.p_LP__in__disabled));
+	SetInputs(0,
+			  ref(top.p_LP__in__locked));
+
+	SetInputs(1,
+			  ref(top.p_LP__in__ready));
+
+
+  }
+
+  if( global_return == 0 )
+	cout << "All checks successfull" << endl;
+  else
+	cout << "At least one check is BAD" << endl;
+
   return global_return;
 }
