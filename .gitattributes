@@ -4,3 +4,4 @@
 *.sch  linguist-detectable
 *.pcb  linguist-detectable
 *.gbr  linguist-detectable
+*.cnc  linguist-language=Gerber
